@@ -468,7 +468,7 @@ pluralizelisttitles = false
       """
 
 [permalinks]
-    blog = "/blog/:year/:month/:day/:contentbasename/"
+    blog = "/blog/:slug/"
 
 # Enable or disable top bar with social icons
 [params.topbar]
