@@ -2,14 +2,14 @@
   NETLIFY_USE_YARN = "true"
   YARN_VERSION = "1.22.17"
   HUGO_VERSION = "0.127.0"
-HUGO_ENV = "production"
+  HUGO_ENV = "production"
 
 [build]
-  command = "yarn build"
+  command = "git submodule update --init --recursive && yarn build"
   publish = "dist"
 
 [context.deploy-preview]
-  command = "yarn build:preview"
+  command = "git submodule update --init --recursive && yarn build:preview"
 
 [dev]
   framework = "hugo"
