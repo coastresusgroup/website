@@ -1,12 +1,119 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-title = "Kaldi"
+title = "CoastResusGroup"
+theme = "hugo-universal-theme"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
+# Main menu
+[menu]
+[[menu.main]]
+    name       = "Home"
+    identifier = "menu.home"
+    url        = "/"
+    weight     = 1
+
+[[menu.main]]
+    name       = "Products"
+    identifier = "menu.products"
+    url        = "/products/"
+    weight     = 2
+
+[[menu.main]]
+    name       = "Values"
+    identifier = "menu.values"
+    url        = "/values/"
+    weight     = 3
+
+[[menu.main]]
+    name       = "Blog"
+    identifier = "menu.blog"
+    url        = "/post/"
+    weight     = 4
+
+[[menu.main]]
+    name       = "Contact"
+    identifier = "menu.contact"
+    url        = "/contact/"
+    weight     = 5
+
+# Top bar social links menu
+[[menu.topbar]]
+    weight = 1
+    name = "Phone"
+    url = "tel:+1-555-0123"
+    pre = "<i class='fas fa-2x fa-phone'></i>"
+
+[[menu.topbar]]
+    weight = 2
+    name = "Email"
+    url = "mailto:coastresusgroup@gmail.com"
+    pre = "<i class='fas fa-2x fa-envelope'></i>"
+
+[[menu.topbar]]
+    weight = 3
+    name = "Facebook"
+    url = "https://facebook.com"
+    pre = "<i class='fab fa-2x fa-facebook'></i>"
+
+[[menu.topbar]]
+    weight = 4
+    name = "Instagram"
+    url = "https://instagram.com"
+    pre = "<i class='fab fa-2x fa-instagram'></i>"
+
 [params]
-images = ["img/og-image.jpg"]
+    images = ["img/og-image.jpg"]
+    author = "CoastResusGroup"
+    defaultKeywords = ["coastresusgroup", "resuscitation", "medical", "training"]
+    mainSections = ["post"]
+    defaultDescription = "CoastResusGroup - Professional resuscitation training and medical education"
+    
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "default"
+    
+    # Logo configuration
+    logo = "img/logo.svg"
+    logo_small = "img/logo.svg"
+    logo_text = "CoastResusGroup"
+    
+    # Contact information
+    contact_url = "/contact"
+    address = """<p class="text-uppercase"><strong>CoastResusGroup</strong>
+        <br>Professional Medical Training
+        <br>Resuscitation Education
+        <br>Emergency Response Training
+        <br>
+        <strong>Contact us for training opportunities</strong>
+      </p>
+      """
+    
+    # About us section
+    about_us = "<p>CoastResusGroup provides professional resuscitation training and medical education services.</p>"
+    copyright = "Copyright (c) 2024, CoastResusGroup; all rights reserved."
+    
+    # Enable or disable top bar with social icons
+    [params.topbar]
+        enable = true
+        text = """<p class="hidden-sm hidden-xs">Contact us for professional medical training opportunities.</p>
+          <p class="hidden-md hidden-lg"><a href="tel:+1-555-0123" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+          <a href="mailto:coastresusgroup@gmail.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+          </p>
+          """
+    
+    # Enable and disable widgets for the right sidebar
+    [params.widgets]
+        categories = true
+        tags = true
+        search = true
+    
+    # Recent posts configuration
+    [params.recent_posts]
+        enable = true
+        title = "Latest News"
+        subtitle = "Stay updated with our latest training programs and medical education content."
+        hide_summary = false
