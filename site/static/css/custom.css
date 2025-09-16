@@ -33,6 +33,11 @@
   background-color: var(--accent-cyan) !important;
 }
 
+/* Remove underlines from navigation links */
+.navbar ul.nav > li > a {
+  text-decoration: none !important;
+}
+
 /* Logo and branding */
 .navbar-brand {
   color: var(--primary-blue) !important;
