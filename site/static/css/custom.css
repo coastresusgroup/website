@@ -251,8 +251,50 @@ blockquote {
   background-color: var(--accent-orange) !important;
 }
 
-/* Responsive adjustments */
+/* Logo Overlap Effect - 4x larger and positioned to overlap menu and content */
+.navbar-brand {
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+.navbar-brand img {
+  max-height: 252px !important; /* 1.5x the 168px (252px) */
+  height: 252px !important;
+  width: auto !important;
+  position: absolute !important;
+  top: -10px !important; /* Half the padding - 10px from top */
+  left: 0 !important;
+  z-index: 10000 !important;
+  transform: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Ensure navbar and content maintain their original layout */
+.navbar,
+.navbar-default,
+.navbar-header {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Ensure content sections maintain their original positioning */
+#all,
+section,
+.container,
+.jumbotron,
+.carousel {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Mobile responsive adjustments for logo */
 @media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 180px !important; /* 1.5x the 120px */
+    height: 180px !important;
+    top: -5px !important; /* Half the padding */
+  }
+  
   .navbar-default .navbar-nav > li > a {
     color: var(--primary-black) !important;
   }
@@ -260,5 +302,13 @@ blockquote {
   .navbar-default .navbar-nav > li > a:hover {
     background-color: var(--accent-cyan) !important;
     color: var(--primary-black) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand img {
+    max-height: 150px !important; /* 1.5x the 100px */
+    height: 150px !important;
+    top: -5px !important; /* Half the padding */
   }
 }
