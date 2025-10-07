@@ -29,13 +29,21 @@
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: var(--primary-blue) !important;
-  background-color: var(--accent-cyan) !important;
+  color: var(--primary-white) !important;
+  background-color: var(--primary-blue) !important;
 }
 
 /* Remove underlines from navigation links */
 .navbar ul.nav > li > a {
   text-decoration: none !important;
+}
+
+/* Active/selected navigation item styling */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: var(--primary-white) !important;
+  background-color: var(--primary-blue) !important;
 }
 
 /* Logo and branding */
@@ -257,24 +265,148 @@ blockquote {
   z-index: 9999 !important;
 }
 
-.navbar-brand img {
-  max-height: 252px !important; /* 1.5x the 168px (252px) */
-  height: 252px !important;
+/* Override theme logo sizing with maximum specificity */
+.navbar .navbar-brand img,
+.navbar-default .navbar-brand img,
+.navbar-header .navbar-brand img,
+.navbar-brand img,
+.navbar .navbar-brand img.hidden-xs,
+.navbar .navbar-brand img.hidden-sm,
+.navbar .navbar-brand img.visible-xs,
+.navbar .navbar-brand img.visible-sm,
+body .navbar .navbar-brand img,
+html body .navbar .navbar-brand img,
+.navbar-brand img[src*="logo.png"],
+.navbar-brand img[src*="logo-small.png"] {
+  max-height: 200px !important; /* Between 150px and 300px */
+  height: 200px !important;
   width: auto !important;
-  position: absolute !important;
-  top: -10px !important; /* Half the padding - 10px from top */
+  position: relative !important;
+  top: 0px !important;
   left: 0 !important;
   z-index: 10000 !important;
   transform: none !important;
   transition: all 0.3s ease !important;
 }
 
+/* Force override with even more specific selectors */
+body .navbar .navbar-brand img,
+body .navbar-default .navbar-brand img,
+body .navbar-header .navbar-brand img,
+img[src="/img/logo.png"],
+img[src="/img/logo-small.png"] {
+  max-height: 200px !important;
+  height: 200px !important;
+  width: auto !important;
+}
+
+/* Nuclear option - target any img in navbar-brand */
+html body .navbar .navbar-brand img,
+html body .navbar-default .navbar-brand img,
+html body .navbar-header .navbar-brand img {
+  max-height: 200px !important;
+  height: 200px !important;
+  width: auto !important;
+  min-height: 200px !important;
+}
+
+/* Force the large logo to be used on all screen sizes */
+.navbar-brand img.visible-xs,
+.navbar-brand img.visible-sm {
+  display: none !important;
+}
+
+.navbar-brand img.hidden-xs,
+.navbar-brand img.hidden-sm {
+  display: block !important;
+}
+
+/* Final attempt - use CSS transform to force size */
+.navbar-brand img {
+  transform: scale(4.76) !important; /* 200px / 42px = 4.76 */
+  transform-origin: top left !important;
+  position: relative !important;
+  z-index: 10000 !important;
+  margin-top: -50px !important; /* Move logo up to be visible */
+}
+
+/* Remove blue overlay from carousel background */
+.home-carousel .dark-mask {
+  display: none !important;
+}
+
+/* Alternative: Make overlay transparent instead of hiding it */
+/* .home-carousel .dark-mask {
+  opacity: 0 !important;
+  background: transparent !important;
+} */
+
+/* Scale photogrid background to window width and show full height */
+.home-carousel {
+  background-size: 100% auto !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  height: 100vh !important; /* Use full viewport height */
+  min-height: 100vh !important; /* Ensure full viewport height */
+}
+
+/* Scale carousel images to 2/3 of window height */
+.home-carousel .owl-carousel .item img {
+  max-height: 66.67vh !important; /* 2/3 of 100vh = 66.67vh */
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+/* Add padding to carousel text content for better centering */
+.home-carousel .owl-carousel .item .col-sm-5 {
+  padding-top: 20vh !important; /* Add top padding to center text */
+  padding-bottom: 20vh !important; /* Add bottom padding to center text */
+}
+
+/* Move carousel navigation elements up to be visible under carousel images */
+.home-carousel .owl-theme .owl-controls {
+  margin-top: -120px !important; /* Move navigation up significantly */
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.home-carousel .owl-theme .owl-controls .owl-page {
+  margin-top: -40px !important; /* Additional upward adjustment */
+}
+
+/* Remove gradient background since logo is now within navbar */
+
 /* Ensure navbar and content maintain their original layout */
 .navbar,
 .navbar-default,
-.navbar-header {
-  position: relative !important;
+.navbar-header,
+.navbar-affixed-top,
+.affix {
+  position: static !important; /* Static so it scrolls with page */
   z-index: 1 !important;
+  height: 120px !important; /* More appropriate height for the logo */
+  min-height: 120px !important;
+}
+
+.navbar-brand {
+  height: 120px !important;
+  min-height: 120px !important;
+}
+
+/* Position navbar buttons at the bottom of the navbar */
+.navbar-nav {
+  position: absolute !important;
+  bottom: 0 !important; /* Position at bottom of navbar */
+  right: 0 !important; /* Position at right side */
+  height: auto !important; /* Let buttons determine their own height */
+  margin: 0 !important;
+}
+
+.navbar-nav > li > a {
+  /* Restore original button dimensions */
+  padding-top: 21px !important; /* Original desktop padding */
+  padding-bottom: 21px !important; /* Original desktop padding */
+  line-height: 20px !important; /* Original line height */
 }
 
 /* Ensure content sections maintain their original positioning */
@@ -287,12 +419,59 @@ section,
   z-index: 1 !important;
 }
 
+/* See More section button styling - Override all states */
+.see-more .btn-template-transparent-black,
+.see-more .btn-template-transparent-black:active,
+.see-more .btn-template-transparent-black.active,
+.see-more .btn-template-transparent-black:focus,
+.see-more .btn-template-transparent-black:hover,
+.see-more .btn-template-transparent-black:visited,
+.see-more .btn-template-transparent-black:link {
+  background-color: var(--primary-white) !important;
+  color: var(--primary-black) !important;
+  border: 2px solid var(--primary-black) !important;
+  background-image: none !important;
+}
+
+.see-more .btn-template-transparent-black:hover,
+.see-more .btn-template-transparent-black:focus,
+.see-more .btn-template-transparent-black:active,
+.see-more .btn-template-transparent-black.active {
+  background-color: var(--primary-black) !important;
+  color: var(--primary-white) !important;
+  border: 2px solid var(--primary-black) !important;
+  background-image: none !important;
+}
+
+/* Override disabled states too */
+.see-more .btn-template-transparent-black.disabled,
+.see-more .btn-template-transparent-black[disabled],
+.see-more .btn-template-transparent-black.disabled:hover,
+.see-more .btn-template-transparent-black[disabled]:hover,
+.see-more .btn-template-transparent-black.disabled:focus,
+.see-more .btn-template-transparent-black[disabled]:focus,
+.see-more .btn-template-transparent-black.disabled:active,
+.see-more .btn-template-transparent-black[disabled]:active {
+  background-color: var(--primary-white) !important;
+  color: var(--primary-black) !important;
+  border: 2px solid var(--primary-black) !important;
+  background-image: none !important;
+}
+
 /* Mobile responsive adjustments for logo */
 @media (max-width: 768px) {
   .navbar-brand img {
     max-height: 180px !important; /* 1.5x the 120px */
     height: 180px !important;
     top: -5px !important; /* Half the padding */
+  }
+  
+  .navbar-brand::before {
+    width: 440px !important; /* 2x wider for mobile (220px * 2) */
+    height: 88px !important; /* 0.4x height for mobile (220px * 0.4) */
+    top: -5px !important; /* Match logo positioning */
+    background: radial-gradient(ellipse 440px 88px at 0 0, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.15) 70%, rgba(255, 255, 255, 0.05) 85%, transparent 100%) !important;
+    border-radius: 0 0 100% 0 !important; /* Quarter circle for mobile */
   }
   
   .navbar-default .navbar-nav > li > a {
@@ -310,5 +489,13 @@ section,
     max-height: 150px !important; /* 1.5x the 100px */
     height: 150px !important;
     top: -5px !important; /* Half the padding */
+  }
+  
+  .navbar-brand::before {
+    width: 360px !important; /* 2x wider for mobile (180px * 2) */
+    height: 72px !important; /* 0.4x height for mobile (180px * 0.4) */
+    top: -5px !important; /* Match logo positioning */
+    background: radial-gradient(ellipse 360px 72px at 0 0, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.15) 70%, rgba(255, 255, 255, 0.05) 85%, transparent 100%) !important;
+    border-radius: 0 0 100% 0 !important; /* Quarter circle for mobile */
   }
 }
