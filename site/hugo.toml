@@ -199,7 +199,7 @@ pluralizelisttitles = false
     enableRecaptchaInContactForm = false
     googleRecaptchaKey = "site_key_for_google_recaptcha"
 
-    about_us = "<p>CoastResusGroup provides professional resuscitation training and medical education services.</p>"
+    # about_us = "<p>CoastResusGroup provides professional resuscitation training and medical education services.</p>"
     copyright = "Copyright (c) 2024, CoastResusGroup; all rights reserved."
 
     # Format dates with Go's time formatting
@@ -213,14 +213,14 @@ pluralizelisttitles = false
     logo = "img/logo.png"
     logo_small = "img/logo-small.png"
     contact_url = "/contact"
-    address = """<p class="text-uppercase"><strong>CoastResusGroup</strong>
-        <br>Professional Medical Training
-        <br>Resuscitation Education
-        <br>Emergency Response Training
-        <br>
-        <strong>Contact us for training opportunities</strong>
-      </p>
-      """
+    # address = """<p class="text-uppercase"><strong>CoastResusGroup</strong>
+    #     <br>Professional Medical Training
+    #     <br>Resuscitation Education
+    #     <br>Emergency Response Training
+    #     <br>
+    #     <strong>Contact us for training opportunities</strong>
+    #   </p>
+    #   """
 
 [permalinks]
     blog = "/blog/:slug/"
@@ -273,16 +273,16 @@ pluralizelisttitles = false
     # All testimonials are defined in their own files. You can find example items
     # at 'exampleSite/data/testimonials'.
     # For more information take a look at the README.
-    title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+    title = "What Our Students Say"
+    subtitle = "Hear from healthcare professionals who have completed our resuscitation training programs. Their experiences reflect our commitment to excellence in medical education and emergency response training."
 
 [params.see_more]
     enable = true
-    icon = "far fa-file-alt"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
+    icon = "fas fa-users"
+    title = "Need Custom Training or Bulk Bookings?"
+    subtitle = "Looking for specialized courses tailored to your organization's needs? We offer custom training programs, bulk booking discounts, and on-site training options for healthcare facilities, emergency services, and corporate clients."
+    link_url = "/custom-courses/"
+    link_text = "Explore Custom Training Options"
 
 [params.clients]
     enable = true
@@ -293,13 +293,13 @@ pluralizelisttitles = false
     subtitle = ""
 
 [params.recent_posts]
-    enable = true
+    enable = false
     title = "From our blog"
     subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
     hide_summary = false
 
 [params.footer.recent_posts]
-    enable = true
+    enable = false
 
 [taxonomies]
     category = "categories"
