@@ -7,6 +7,136 @@
   --accent-orange: #e76a1e;
 }
 
+/* Make page titles 2x bigger (FAQ and About page) */
+#heading-breadcrumbs h1 {
+  font-size: 60px !important; /* 2x the original 30px */
+}
+
+/* FAQ page text sizing */
+/* First paragraph (intro) on FAQ page - 20px */
+#content .container .row .col-md-12 > div > p:first-of-type {
+  font-size: 20px !important;
+}
+
+/* All other paragraphs on FAQ page - 16px */
+#content .container .row .col-md-12 > div > p:not(:first-of-type) {
+  font-size: 16px !important;
+}
+
+/* Fix dropdown menu items with URLs to be clickable */
+.navbar-nav .dropdown > a[href]:not([href="#"]):not(.dropdown-toggle) {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.navbar-nav .dropdown > a.dropdown-toggle {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Make team member photos 3x bigger on the about page with text wrapping */
+.testimonials .item .testimonial {
+  overflow: visible !important;
+  padding: 20px !important;
+}
+
+.testimonials .item .testimonial .text {
+  overflow: visible !important;
+  margin-bottom: 20px !important;
+}
+
+/* Position name and image in text area for wrapping */
+.testimonials .item .testimonial .text .name-picture {
+  overflow: visible !important;
+  padding: 0 0 15px 0 !important;
+  margin: 0 0 15px 0 !important;
+  min-height: auto !important;
+  text-align: left !important;
+  float: left !important;
+  width: 200px !important;
+  margin-right: 20px !important;
+}
+
+.testimonials .item .testimonial .text .name-picture img {
+  width: 180px !important; /* 60px * 3 = 180px */
+  height: 180px !important;
+  object-fit: cover !important;
+  border-radius: 90px !important; /* 30px * 3 = 90px */
+  float: none !important;
+  margin: 0 0 10px 0 !important;
+  display: block !important;
+}
+
+.testimonials .item .testimonial .text .name-picture h5 {
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
+  clear: both !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+
+.testimonials .item .testimonial .text .name-picture p {
+  margin-bottom: 0 !important;
+  clear: both !important;
+  font-size: 13px !important;
+  color: #999 !important;
+}
+
+/* Make bio text wrap around the image */
+.testimonials .item .testimonial .text > p {
+  margin-top: 0 !important;
+  text-align: left !important;
+}
+
+/* Center Aims and Values heading and increase bullet point font size */
+#content h2#aims-and-values {
+  text-align: center !important;
+}
+
+/* Constrain Aims and Values section to 75% width */
+#content h2#aims-and-values,
+#content h2#aims-and-values ~ p {
+  width: 75% !important;
+  max-width: 75% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Target paragraphs that come after the Aims and Values heading */
+#content h2#aims-and-values ~ p {
+  font-size: 18px !important;
+  line-height: 1.6 !important; /* Maintain spacing within each point */
+  text-align: center !important;
+  text-indent: 0 !important;
+  padding-left: 0 !important;
+  margin-bottom: 30px !important; /* Increase spacing between points */
+  margin-top: 0 !important;
+}
+
+/* Add grey background to team section (full width) */
+.bar.no-mb {
+  background: #eeeeee !important;
+  background-image: none !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 60px 0 !important;
+}
+
+/* Constrain the container inside to 75% width */
+.bar.no-mb .container {
+  width: 75% !important;
+  max-width: 75% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
 /* Override Hugo Universal theme colors */
 /* Primary color overrides */
 .bg-primary {
@@ -36,6 +166,26 @@
 /* Remove underlines from navigation links */
 .navbar ul.nav > li > a {
   text-decoration: none !important;
+}
+
+/* Ensure all navigation links (including simple menu items without dropdowns) have consistent styling */
+.navbar-nav > li.dropdown > a:not(.dropdown-toggle) {
+  display: inline-block !important;
+  padding-top: 21px !important;
+  padding-bottom: 21px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  vertical-align: top !important;
+}
+
+/* Fix dropdown toggle button alignment and padding to match other buttons */
+.navbar-nav > li.dropdown > a.dropdown-toggle {
+  display: inline-block !important;
+  padding-top: 21px !important;
+  padding-bottom: 21px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  vertical-align: top !important;
 }
 
 /* Active/selected navigation item styling */
@@ -406,6 +556,8 @@ html body .navbar-header .navbar-brand img {
   /* Restore original button dimensions */
   padding-top: 21px !important; /* Original desktop padding */
   padding-bottom: 21px !important; /* Original desktop padding */
+  padding-left: 15px !important;
+  padding-right: 15px !important;
   line-height: 20px !important; /* Original line height */
 }
 

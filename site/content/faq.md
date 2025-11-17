@@ -1,43 +1,45 @@
 +++
 title = "FAQ"
-description = "Frequently asked questions"
+description = "Frequently asked questions about Coast Resuscitation Group courses, registration process and policies"
 type = "page"
-keywords = ["FAQ","How do I","questions","what if"]
+keywords = ["FAQ","How do I","questions","what if","courses","registration"]
 +++
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+Coast Resuscitation Group provides accredited Advanced Life Support and trauma courses across Queensland and Northern NSW. Below are answers to the most common questions about our courses, registration process and policies.
 
-## 1. WHAT TO DO IF I HAVE STILL NOT RECEIVED THE ORDER?
+---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+## 1. Which courses do you offer?
 
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
-* Vestibulum auctor dapibus neque.
+We deliver Australian Resuscitation Council (ARC) Advanced Life Support Level 1 and Level 2 (ALS1 & ALS2) and the Trauma Nursing Core Course (TNCC) accredited by the Emergency Nurses Association (ENA).
 
-## 2. WHAT ARE THE POSTAL RATES?
+---
 
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+## 2. Where are courses held?
 
-## 3. DO YOU SEND OVERSEAS?
+Courses are conducted at various venues across Queensland and Northern New South Wales. We also offer onsite training for hospitals and healthcare organisations by arrangement.
 
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+---
 
-## 4. WHY ARE YOU MORE EXPENSIVE THAN OTHERS?
+## 3. How do I register?
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+You can register directly through our website at www.coastresusgroup.com.au. Once payment is received, you'll receive confirmation and access to pre-course materials.
 
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
-* Vestibulum auctor dapibus neque.
+---
 
-## 5. ANOTHER IMPORTANT QUESTION
+## 4. What is included in the course fee?
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+Course fees include tuition, all course materials and assessments. Catering availability varies by venue and will be noted on your course confirmation.
 
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
-* Vestibulum auctor dapibus neque.
+---
+
+## 5. When will I receive pre-course materials?
+
+After payment and registration, participants receive their manual or online e-learning access approximately four weeks before the course start date.
+
+---
+
+## 6. Can the course be completed entirely online?
 
 ---
 

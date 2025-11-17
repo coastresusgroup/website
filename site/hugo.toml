@@ -11,6 +11,12 @@ summaryLength = 70
 # not pluralize title pages by default
 pluralizelisttitles = false
 
+# Enable unsafe HTML in markdown (needed for embeds like Calendly)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [services]
     # Enable comments by entering your Disqus shortname
     [services.disqus]
@@ -36,12 +42,6 @@ pluralizelisttitles = false
     identifier = "menu.about"
     url        = "/about/"
     weight     = 2
-
-[[menu.main]]
-    name       = "Our Team"
-    url        = "/our-team/"
-    weight     = 1
-    parent     = "menu.about"
 
 [[menu.main]]
     name       = "Courses"
@@ -85,12 +85,6 @@ pluralizelisttitles = false
     url        = "/custom-courses/"
     weight     = 4
     parent     = "section.course-types"
-
-[[menu.main]]
-    name       = "Book Now"
-    identifier = "menu.book-now"
-    url        = "/book-now/"
-    weight     = 4
 
 [[menu.main]]
     name       = "Resources"
