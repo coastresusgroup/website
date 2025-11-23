@@ -5,11 +5,11 @@
   HUGO_ENV = "production"
 
 [build]
-  command = "git submodule update --init --recursive && yarn build"
+  command = "git submodule update --init --recursive --depth 1 && yarn build"
   publish = "dist"
 
 [context.deploy-preview]
-  command = "git submodule update --init --recursive && yarn build:preview"
+  command = "git submodule update --init --recursive --depth 1 && yarn build:preview"
 
 [dev]
   framework = "hugo"
