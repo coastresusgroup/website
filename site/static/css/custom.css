@@ -18,7 +18,10 @@
 #heading-breadcrumbs {
   position: relative;
   overflow: visible;
-  background: url('../img/new_texture.jpg') center center repeat !important; /* Use colored texture instead of grey */
+  background-image: url('../img/new_texture.jpg') !important;
+  background-position: center center !important;
+  background-repeat: repeat !important;
+  background-size: auto !important;
   padding: 20px 0;
   margin-bottom: 40px;
 }
