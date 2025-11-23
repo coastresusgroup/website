@@ -14,14 +14,14 @@
   text-shadow: 2px 2px 3px rgba(51, 51, 51, 0.7) !important; /* Slightly transparent grey drop shadow with slight blur */
 }
 
-/* Heading breadcrumbs with image layout */
-#heading-breadcrumbs {
+/* Heading breadcrumbs with image layout - Override theme's texture-green.png */
+#heading-breadcrumbs,
+body #heading-breadcrumbs,
+html body #heading-breadcrumbs {
   position: relative;
   overflow: visible;
+  background: url('../img/new_texture.jpg') center center repeat !important;
   background-image: url('../img/new_texture.jpg') !important;
-  background-position: center center !important;
-  background-repeat: repeat !important;
-  background-size: auto !important;
   padding: 20px 0;
   margin-bottom: 40px;
 }
