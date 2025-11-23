@@ -1,0 +1,21 @@
+<div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-breadcrumbs-content">
+                    <h1>{{ .Title }}</h1>
+                    {{ if eq .RelPermalink "/als1-basic/" }}
+                    <div class="heading-breadcrumbs-image">
+                        <img src="/img/ALS1_wide.png" alt="ARC ALS Level 1" />
+                    </div>
+                    {{ else if eq .RelPermalink "/als2-advanced/" }}
+                    <div class="heading-breadcrumbs-image">
+                        <img src="/img/ALS2_wide.png" alt="ARC ALS Level 2" />
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

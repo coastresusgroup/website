@@ -1,0 +1,42 @@
+{{ if default true .Site.Params.CarouselHomepage.enable }}
+{{ if isset .Site.Data "carousel" }}
+{{ if gt (len .Site.Data.carousel) 0 }}
+<section>
+    <div class="home-carousel">
+        <div class="dark-mask"></div>
+        <div class="container">
+            <div class="homepage owl-carousel"
+                data-autoplay="{{ default true .Site.Params.CarouselHomepage.auto_play }}"
+                data-slide-speed="{{ default 2000 .Site.Params.CarouselHomepage.slide_speed }}"
+                data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
+                {{ range sort .Site.Data.carousel "weight" }}
+                <div class="item">
+                    <div class="row">
+                        <div class="col-sm-5 right">
+                            <h1>{{ .title | safeHTML }}</h1>
+                            {{ .description | safeHTML }}
+                            {{ if .href }}
+                            <div class="carousel-button-wrapper">
+                                <a href="{{ .href }}" class="carousel-learn-more-btn" style="{{ if .button_color }}background-color: {{ .button_color }} !important;{{ end }}color: #ffffff !important;">
+                                    Learn More
+                                </a>
+                            </div>
+                            {{ end }}
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="carousel-widget-container">
+                                <div class="calendly-inline-widget" data-url="https://calendly.com/coastresusgroup?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            <!-- /.project owl-slider -->
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}
+

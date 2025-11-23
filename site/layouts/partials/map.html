@@ -1,0 +1,13 @@
+{{ if .Site.Params.enableMaps }}
+  {{ if isset .Site.Params "latitude" }}
+    {{ if isset .Site.Params "longitude" }}
+        <div class="hidden">
+          <input id="map-lat" value="{{ .Site.Params.latitude }}" />
+          <input id="map-lng" value="{{ .Site.Params.longitude }}" />
+          <input id="map-marker" value="{{ "img/marker.png" | relURL }}" />
+        </div>
+        <div id="map" />
+    {{ end }}
+  {{ end }}
+{{ end }}
+
