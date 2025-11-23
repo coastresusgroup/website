@@ -46,14 +46,14 @@
 
                   {{ if .HasChildren }}
                     <!-- Check if the first child marks a menu section identifier -->
-                    {{ $hasSections := (hasPrefix (index .Children 0).Identifier "section.") }}
+                    {{ $hasSections := false }}
+                    {{ if gt (len .Children) 0 }}
+                      {{ if (index .Children 0).Identifier }}
+                        {{ $hasSections = (hasPrefix (index .Children 0).Identifier "section.") }}
+                      {{ end }}
+                    {{ end }}
                     <li class="dropdown{{ if $hasSections }} use-yamm yamm-fw{{end}} {{ $active }}">
-                        {{ if ne .URL "" }}
-                        <a href="{{ .URL }}" style="display: inline-block;">{{ .Name }}</a>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: inline-block; padding: 15px 5px;"><span class="caret"></span></a>
-                        {{ else }}
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
-                        {{ end }}
                         {{ if $hasSections }}
                         <ul class="dropdown-menu">
                             <li>

@@ -1,200 +1,143 @@
 +++
-title = "ALS2 (Advanced)"
-description = "Advanced Advanced Life Support training for experienced healthcare professionals"
+title = "ARC ALS Level 2"
+description = "Australian Resuscitation Council Advanced Life Support Level 2 course for healthcare professionals"
 type = "page"
 +++
 
-# ALS2 (Advanced Advanced Life Support)
+<div class="course-hero">
+  <div class="course-hero-content">
+    <h1>Australian Resuscitation Council Advanced Life Support (ALS) Level 2</h1>
+    <p class="course-subtitle">Comprehensive two-day advanced training program</p>
+  </div>
+</div>
 
-**Duration**: 3 days (24 hours)  
-**Prerequisites**: Current ALS1 certification  
-**Certification**: Valid for 2 years  
-**Maximum Participants**: 6 per instructor
+<div class="course-info-grid">
+  <div class="info-card">
+    <div class="info-icon">📅</div>
+    <h3>Duration</h3>
+    <p>2 days</p>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">⏰</div>
+    <h3>Time</h3>
+    <p>08:00am – 04:30pm</p>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">🎓</div>
+    <h3>CPD Hours</h3>
+    <p>12 hours</p>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">🍽️</div>
+    <h3>Catering</h3>
+    <p>Morning tea, lunch and afternoon tea provided</p>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">✅</div>
+    <h3>Expiry</h3>
+    <p>4 years</p>
+  </div>
+</div>
 
-## Course Overview
+<div class="course-section">
+  <div class="course-description-grid">
+    <div class="course-description-main">
+      <div class="course-card">
+        <h2>Course Description</h2>
+        <p>The ARC Advanced Life Support (ALS) Level 2 course is a comprehensive two-day program designed for healthcare professionals who manage critically ill or deteriorating patients. It focuses on advanced clinical assessment, management of life-threatening conditions, and effective team-based resuscitation. Participants refine their skills in airway management, pharmacology, and post-resuscitation care through high-fidelity simulations and evidence-based protocols. The course is suitable for medical practitioners, nurses, paramedics, and allied health professionals seeking to enhance their advanced life support capabilities.</p>
+      </div>
+    </div>
+    <div class="course-description-sidebar">
+      <div class="course-card">
+        <h2>Who Should Attend</h2>
+        <div class="attendees-list">
+          <div class="attendee-item">Medical Practitioners</div>
+          <div class="attendee-item">Registered Nurses</div>
+          <div class="attendee-item">Paramedics</div>
+          <div class="attendee-item">Allied Health Professionals</div>
+          <div class="attendee-item">Critical Care Personnel</div>
+          <div class="attendee-item">Emergency Department Staff</div>
+          <div class="attendee-item">Healthcare professionals seeking to enhance their advanced life support capabilities</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-ALS2 is our advanced resuscitation training program designed for experienced healthcare professionals who need to lead complex resuscitation efforts and manage advanced life support situations. This intensive program builds upon ALS1 skills with advanced techniques and leadership training.
+<div class="course-section">
+  <div class="course-card highlight-card">
+    <h2>Learning Outcomes</h2>
+    <div class="outcomes-grid">
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Conduct a structured primary survey using the A–E approach for critically ill or deteriorating patients.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Recognise and manage complex cardiac arrests, including peri-arrest situations.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Assess and manage tachycardia and bradycardia arrhythmias, including appropriate interventions.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Perform advanced airway management, ventilation, and oxygenation techniques.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Interpret advanced ECG rhythms and arterial blood gases (ABGs) to guide clinical management.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Assess and manage life-threatening conditions such as anaphylaxis, chest pain, and sepsis.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Demonstrate effective leadership, communication, and teamwork during high-acuity resuscitation scenarios.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Apply post-resuscitation care principles to optimise patient outcomes.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Integrate evidence-based decision-making in dynamic and complex clinical situations.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-## Who Should Attend
+<div class="course-section">
+  <div class="course-card">
+    <h2>Assessment Requirements</h2>
+    <p>Assessment is continuous throughout the course and includes both knowledge and practical skills evaluation. Participants must:</p>
+    <div class="assessment-list">
+      <div class="assessment-item">
+        <span class="assessment-number">1</span>
+        <p>Complete a pre-course MCQ to assess baseline knowledge.</p>
+      </div>
+      <div class="assessment-item">
+        <span class="assessment-number">2</span>
+        <p>Complete a post-course MCQ, achieving a minimum pass mark of 80%.</p>
+      </div>
+      <div class="assessment-item">
+        <span class="assessment-number">3</span>
+        <p>Successfully complete the Cardiac Arrest Scenario testing station, demonstrating competence in advanced life support, team communication, and clinical decision-making in simulated high-acuity situations.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-- Experienced Registered Nurses
-- Advanced Practice Nurses
-- Physicians and Medical Residents
-- Senior Paramedics and EMTs
-- Critical Care Specialists
-- Emergency Department Leaders
-- Healthcare professionals seeking advanced resuscitation skills
-
-## Prerequisites
-
-- Current ALS1 certification (valid and not expired)
-- Minimum 6 months clinical experience in emergency or critical care
-- Basic understanding of cardiac anatomy and physiology
-- Experience with emergency medications and procedures
-
-## Course Content
-
-### Day 1: Advanced Airway and Breathing
-
-**Morning Session (4 hours)**
-- Advanced Airway Anatomy and Physiology
-- Endotracheal Intubation Techniques
-- Supraglottic Airway Devices
-- Difficult Airway Management
-- Ventilation Strategies and Monitoring
-
-**Afternoon Session (4 hours)**
-- Advanced Breathing Support
-- Mechanical Ventilation During Resuscitation
-- Oxygen Delivery Systems
-- Capnography and Advanced Monitoring
-- Hands-on Airway Practice
-
-### Day 2: Advanced Cardiac Care
-
-**Morning Session (4 hours)**
-- Advanced Cardiac Monitoring
-- ECG Interpretation in Emergency Situations
-- Advanced Drug Administration
-- Invasive Procedures and Techniques
-- Hemodynamic Monitoring
-
-**Afternoon Session (4 hours)**
-- Complex Cardiac Scenarios
-- Post-Resuscitation Care
-- Advanced Life Support Algorithms
-- Team Leadership in Complex Situations
-- Scenario-Based Practice
-
-### Day 3: Leadership and Complex Scenarios
-
-**Morning Session (4 hours)**
-- Advanced Team Leadership
-- Communication in High-Stress Situations
-- Resource Management and Coordination
-- Quality Improvement and Debriefing
-- Advanced Scenario Practice
-
-**Afternoon Session (4 hours)**
-- Complex Multi-System Emergencies
-- Special Populations and Situations
-- Advanced Assessment and Certification
-- Course Evaluation and Feedback
-- Continuing Education Planning
-
-## Learning Objectives
-
-Upon completion of this course, participants will be able to:
-
-1. **Manage** complex airway emergencies with advanced techniques
-2. **Interpret** advanced cardiac monitoring and diagnostic information
-3. **Administer** complex medication protocols during resuscitation
-4. **Lead** advanced resuscitation teams in high-stress situations
-5. **Coordinate** multi-disciplinary emergency response efforts
-6. **Perform** advanced procedures and invasive techniques
-7. **Manage** post-resuscitation care and stabilization
-8. **Implement** quality improvement processes in resuscitation
-
-## Advanced Skills Covered
-
-### Airway Management
-- Endotracheal intubation (oral and nasal)
-- Supraglottic airway device placement
-- Difficult airway algorithms and techniques
-- Advanced ventilation strategies
-- Capnography interpretation and use
-
-### Cardiac Care
-- Advanced ECG interpretation
-- Complex arrhythmia management
-- Advanced drug administration protocols
-- Invasive monitoring techniques
-- Hemodynamic assessment and management
-
-### Leadership and Coordination
-- Advanced team leadership skills
-- Crisis resource management
-- Communication in high-stress situations
-- Resource allocation and coordination
-- Quality improvement and debriefing
-
-## Assessment Methods
-
-### Advanced Practical Skills
-- Complex airway management competency
-- Advanced cardiac care techniques
-- Leadership and communication skills
-- Invasive procedure competency
-
-### Written Examination
-- Advanced scenario-based questions
-- Complex protocol knowledge
-- Leadership and management principles
-- Quality improvement concepts
-
-### Complex Scenario Assessment
-- Multi-system emergency management
-- Advanced team leadership evaluation
-- High-stress situation handling
-- Resource coordination assessment
-
-## Certification Requirements
-
-To receive ALS2 certification, participants must:
-
-- Attend all course sessions (100% attendance required)
-- Demonstrate competency in all advanced practical skills
-- Pass the advanced written examination (85% minimum score)
-- Successfully complete complex scenario-based assessments
-- Demonstrate effective leadership and communication skills
-- Participate actively in all learning activities
-
-## Advanced Course Materials
-
-Participants receive:
-
-- **Advanced Manual**: Comprehensive advanced life support reference
-- **Complex Scenarios**: Advanced case studies and emergency situations
-- **Leadership Resources**: Team management and communication guides
-- **Online Portal**: Access to advanced learning materials and updates
-- **Certification Card**: Official advanced certification
-- **Continuing Education Credits**: Advanced level credits where applicable
-
-## Equipment and Advanced Facilities
-
-Our advanced training facility provides:
-
-- **High-Fidelity Simulation Manikins**: Advanced physiological responses
-- **Advanced Airway Equipment**: Complete range of intubation and airway tools
-- **Cardiac Monitoring Systems**: Advanced ECG and hemodynamic monitoring
-- **Medication Administration Systems**: Advanced drug delivery equipment
-- **Simulation Control Systems**: Realistic emergency scenario management
-- **Debriefing Technology**: Video recording and analysis capabilities
-
-## Continuing Education and Advancement
-
-Advanced certification maintenance includes:
-
-- **Regular Advanced Practice**: Ongoing skill maintenance and development
-- **Updated Advanced Guidelines**: Access to latest advanced protocols
-- **Instructor Development**: Opportunities for instructor training
-- **Specialized Training**: Advanced courses in specific areas
-- **Professional Development**: Leadership and management training
-
-## Registration and Investment
-
-**Course Fee**: [Contact for current pricing]  
-**Includes**: All advanced materials, equipment, and certification  
-**Payment Options**: Credit card, bank transfer, or organizational purchase order
-
-### Registration Requirements
-
-1. **Prerequisite Verification**: Current ALS1 certification and experience documentation
-2. **Complete Registration**: Online or by phone with detailed information
-3. **Payment Confirmation**: Secure payment processing
-4. **Pre-Course Assessment**: Advanced preparation materials and evaluation
-5. **Course Confirmation**: Final details and advanced logistics
-
----
-
-*Ready to advance your resuscitation skills to the next level? [Book your ALS2 course now](/book-now/) or [contact us](/contact/) to discuss prerequisites and scheduling.*
+<div class="course-section">
+  <div class="course-card cta-card">
+    <h2>Ready to Advance Your Skills?</h2>
+    <p>Take your ALS capabilities to the next level with our comprehensive Level 2 training.</p>
+    <div class="cta-calendly-widget">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/coastresusgroup?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+    </div>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</div>

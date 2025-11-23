@@ -9,6 +9,12 @@ id = "contact"
 
 Ready to advance your resuscitation skills? Register for one of our comprehensive training programs and join hundreds of healthcare professionals who have enhanced their emergency response capabilities through CoastResusGroup.
 
+<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/coastresusgroup/example-course'});return false;" class="btn btn-primary btn-lg" style="margin: 20px 0; display: inline-block;">Book now</a>
+<!-- Calendly link widget end -->
+
 ## Available Courses
 
 ### ALS1 (Basic Advanced Life Support)

@@ -1,5 +1,5 @@
 weight: 3
 name: "Trauma Nursing Core Course"
-icon: "fas fa-user-md"
-url: "/custom-courses/"
+icon: "fas fa-user-nurse"
+url: "/tncc/"
 description: "Comprehensive Trauma Nursing Core Course (TNCC) for emergency and trauma nurses. Advanced training in trauma assessment, intervention, and patient management with evidence-based protocols and simulation practice."

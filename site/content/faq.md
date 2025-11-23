@@ -44,3 +44,5 @@ After payment and registration, participants receive their manual or online e-le
 ---
 
 > In case you haven't found the answer for your question please feel free to contact us, our customer support will be happy to help you.
+
+{{< contact-form >}}

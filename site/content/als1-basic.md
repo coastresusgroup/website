@@ -1,157 +1,130 @@
 +++
-title = "ALS1 (Basic)"
-description = "Basic Advanced Life Support training for healthcare professionals"
+title = "ARC ALS Level 1"
+description = "Australian Resuscitation Council Advanced Life Support Level 1 course for healthcare professionals"
 type = "page"
 +++
 
-# ALS1 (Basic Advanced Life Support)
+<div class="course-hero">
+  <div class="course-hero-content">
+    <h1>Australian Resuscitation Council Advanced Life Support (ALS) Level 1</h1>
+    <p class="course-subtitle">Comprehensive one-day training for healthcare professionals</p>
+  </div>
+</div>
 
-**Duration**: 2 days (16 hours)  
-**Prerequisites**: Basic healthcare training or equivalent experience  
-**Certification**: Valid for 2 years  
-**Maximum Participants**: 8 per instructor
+<div class="course-info-grid">
+  <div class="info-card">
+    <div class="info-icon">📅</div>
+    <h3>Duration</h3>
+    <p>1 day</p>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">⏰</div>
+    <h3>Time</h3>
+    <p>08:00am – 04:30pm</p>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">🎓</div>
+    <h3>CPD Hours</h3>
+    <p>6 hours</p>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">🍽️</div>
+    <h3>Catering</h3>
+    <p>Morning tea, lunch and afternoon tea provided</p>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">✅</div>
+    <h3>Expiry</h3>
+    <p>4 years</p>
+  </div>
+</div>
 
-## Course Overview
+<div class="course-section">
+  <div class="course-description-grid">
+    <div class="course-description-main">
+      <div class="course-card">
+        <h2>Course Description</h2>
+        <p>The ARC ALS Level 1 course introduces advanced life support concepts for GPs, physicians, radiologists, registered nurses, paramedics, and medical, nursing, and paramedic students. It covers recognition and management of cardiac arrest, airway management, basic ECG interpretation, defibrillation, and effective team communication to improve patient outcomes in emergencies.</p>
+      </div>
+    </div>
+    <div class="course-description-sidebar">
+      <div class="course-card">
+        <h2>Who Should Attend</h2>
+        <div class="attendees-list">
+          <div class="attendee-item">General Practitioners</div>
+          <div class="attendee-item">Physicians</div>
+          <div class="attendee-item">Radiologists</div>
+          <div class="attendee-item">Registered Nurses</div>
+          <div class="attendee-item">Paramedics</div>
+          <div class="attendee-item">Medical Students</div>
+          <div class="attendee-item">Nursing Students</div>
+          <div class="attendee-item">Paramedic Students</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-ALS1 is our foundational advanced life support course designed for healthcare professionals who need to respond to cardiac emergencies. This comprehensive program provides the essential knowledge and skills required to manage cardiac arrest and other life-threatening emergencies effectively.
+<div class="course-section">
+  <div class="course-card highlight-card">
+    <h2>Learning Outcomes</h2>
+    <div class="outcomes-grid">
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Recognise and respond to signs of clinical deterioration and cardiac arrest.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Conduct a structured primary survey using the A–E approach to assess critically ill patients.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Apply the DRSABCD approach and perform effective basic and advanced life support.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Demonstrate safe airway management techniques and effective ventilation.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Accurately attach and interpret ECG monitoring and recognise shockable and non-shockable rhythms.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Assess and manage patients presenting with chest pain and anaphylaxis.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Safely operate a defibrillator and deliver defibrillation when indicated.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Participate effectively as a member of a resuscitation team using structured communication and leadership.</p>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-icon">✓</span>
+        <p>Understand principles of post-resuscitation care and appropriate escalation processes.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-## Who Should Attend
+<div class="course-section">
+  <div class="course-card">
+    <h2>Assessment Requirements</h2>
+    <p>The Australian Resuscitation Council (ARC) Advanced Life Support (ALS) Level 1 course employs continuous assessment throughout its duration. Candidates are evaluated via clinical simulations, including scenarios involving airway management, initial assessment, and resuscitation, to demonstrate core competencies taught during the course.</p>
+  </div>
+</div>
 
-- Registered Nurses
-- Paramedics and EMTs
-- Medical Students and Residents
-- Healthcare Technicians
-- Emergency Department Staff
-- Critical Care Personnel
-- Any healthcare professional requiring ALS certification
-
-## Course Content
-
-### Day 1: Foundation Skills
-
-**Morning Session (4 hours)**
-- Introduction to Advanced Life Support
-- Cardiac Arrest Recognition and Response
-- High-Quality CPR Techniques
-- Basic Airway Management
-- Ventilation Techniques and Equipment
-
-**Afternoon Session (4 hours)**
-- Defibrillation Principles and Practice
-- Automated External Defibrillator (AED) Use
-- Team Coordination and Communication
-- Basic Life Support Integration
-- Hands-on Practice Sessions
-
-### Day 2: Advanced Applications
-
-**Morning Session (4 hours)**
-- Advanced Airway Adjuncts
-- Drug Administration During Resuscitation
-- Post-Resuscitation Care
-- Special Situations and Considerations
-- Scenario-Based Practice
-
-**Afternoon Session (4 hours)**
-- Complex Emergency Scenarios
-- Team Leadership Skills
-- Quality Improvement in Resuscitation
-- Assessment and Certification
-- Course Evaluation and Feedback
-
-## Learning Objectives
-
-Upon completion of this course, participants will be able to:
-
-1. **Recognize** cardiac arrest and other life-threatening emergencies
-2. **Perform** high-quality CPR with proper technique and timing
-3. **Use** defibrillation equipment safely and effectively
-4. **Manage** basic airway and breathing problems
-5. **Coordinate** team-based resuscitation efforts
-6. **Administer** appropriate medications during resuscitation
-7. **Provide** initial post-resuscitation care
-8. **Lead** basic resuscitation teams effectively
-
-## Practical Skills Covered
-
-- **CPR Techniques**: Adult, child, and infant CPR
-- **Airway Management**: Basic airway techniques and adjuncts
-- **Defibrillation**: Manual and automated defibrillator use
-- **Ventilation**: Bag-mask ventilation and oxygen delivery
-- **Team Coordination**: Effective communication and leadership
-- **Medication Administration**: Essential drugs during resuscitation
-
-## Assessment Methods
-
-### Practical Skills Evaluation
-- CPR technique assessment
-- Airway management competency
-- Defibrillation skills evaluation
-- Team coordination demonstration
-
-### Written Examination
-- Multiple choice questions covering course content
-- Scenario-based problem solving
-- Protocol and guideline knowledge
-
-### Scenario-Based Assessment
-- Realistic emergency situations
-- Team-based problem solving
-- Leadership and communication evaluation
-
-## Certification Requirements
-
-To receive ALS1 certification, participants must:
-
-- Attend all course sessions (100% attendance required)
-- Demonstrate competency in all practical skills
-- Pass the written examination (80% minimum score)
-- Successfully complete scenario-based assessments
-- Participate actively in all learning activities
-
-## Course Materials
-
-Participants receive:
-
-- **Comprehensive Manual**: Detailed course content and reference materials
-- **Practice Scenarios**: Case studies and emergency situations
-- **Online Resources**: Access to additional learning materials
-- **Certification Card**: Official certification upon successful completion
-- **Continuing Education Credits**: Where applicable and recognized
-
-## Equipment and Facilities
-
-Our training facility provides:
-
-- **High-Fidelity Manikins**: Realistic training equipment
-- **Defibrillation Equipment**: Both manual and automated devices
-- **Airway Management Tools**: Complete range of airway adjuncts
-- **Simulation Equipment**: Realistic emergency scenarios
-- **Audio-Visual Resources**: Interactive learning materials
-
-## Continuing Education
-
-Certification maintenance includes:
-
-- **Regular Practice**: Ongoing skill maintenance and development
-- **Updated Guidelines**: Access to latest protocols and recommendations
-- **Refresher Courses**: Optional skill updates and practice sessions
-- **Advanced Training**: Progression to ALS2 and specialized courses
-
-## Registration and Fees
-
-**Course Fee**: [Contact for current pricing]  
-**Includes**: All materials, equipment, and certification  
-**Payment**: Accepted via credit card, bank transfer, or organizational purchase order
-
-### Registration Process
-
-1. **Complete Registration Form**: Online or by phone
-2. **Submit Prerequisites**: Documentation of healthcare training
-3. **Payment Confirmation**: Secure payment processing
-4. **Pre-Course Materials**: Access to online resources
-5. **Course Confirmation**: Final details and logistics
-
----
-
-*Ready to begin your ALS1 training? [Book your course now](/book-now/) or [contact us](/contact/) for more information about scheduling and prerequisites.*
+<div class="course-section">
+  <div class="course-card cta-card">
+    <h2>Ready to Begin Your Training?</h2>
+    <p>Start your ALS Level 1 journey today and enhance your life support capabilities.</p>
+    <div class="cta-calendly-widget">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/coastresusgroup?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+    </div>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</div>

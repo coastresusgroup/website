@@ -46,51 +46,26 @@ pluralizelisttitles = false
 [[menu.main]]
     name       = "Courses"
     identifier = "menu.courses"
-    url        = "/courses/"
+    url        = ""
     weight     = 3
 
 [[menu.main]]
-    name       = "Overview"
-    url        = "/course-overview/"
-    weight     = 1
-    parent     = "menu.courses"
-
-[[menu.main]]
-    name       = "Course Types"
-    identifier = "section.course-types"
-    url        = "/course-types/"
-    weight     = 2
-    parent     = "menu.courses"
-
-[[menu.main]]
-    name       = "ALS1 (Basic)"
+    name       = "ARC ALS Level 1"
     url        = "/als1-basic/"
     weight     = 1
-    parent     = "section.course-types"
+    parent     = "menu.courses"
 
 [[menu.main]]
-    name       = "ALS2 (Advanced)"
+    name       = "ARC ALS Level 2"
     url        = "/als2-advanced/"
     weight     = 2
-    parent     = "section.course-types"
+    parent     = "menu.courses"
 
 [[menu.main]]
-    name       = "Recertification"
-    url        = "/recertification/"
+    name       = "Trauma Nursing Core Course (TNCC)"
+    url        = "/tncc/"
     weight     = 3
-    parent     = "section.course-types"
-
-[[menu.main]]
-    name       = "Custom Courses"
-    url        = "/custom-courses/"
-    weight     = 4
-    parent     = "section.course-types"
-
-[[menu.main]]
-    name       = "Resources"
-    identifier = "menu.resources"
-    url        = "/resources/"
-    weight     = 5
+    parent     = "menu.courses"
 
 [[menu.main]]
     name       = "FAQ"
@@ -149,32 +124,26 @@ pluralizelisttitles = false
     twitter_site = "GoHugoIO" # the Twitter handle of your site (without the '@')
     default_sharing_image = "img/sharing-default.png"
 
-    # Google Maps widget: If `googleMapsApiKey` is not set, no key will be passed to Google (which likely results in a broken map widget).
-    enableGoogleMaps = true
-    googleMapsApiKey = "AIzaSyAv7Sza8NSp9_l_g8G2vlo0H4ydEPn_2jY"
+    # Map widget using OpenStreetMap (free, no API key required)
+    enableMaps = true
 
-    latitude = "-12.043333"
-    longitude = "-77.028333"
+    latitude = "-28.17"
+    longitude = "153.54"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "default"
 
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 50 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - register your account to https://formspree.io/register
-    # - login and create new form
-    # - set your form's endpoint url under 'formspree_action' below
-    # - upload the generated site to your server
-    # - test a dummy email yourself
-    # - you're done. Happy mailing!
-    #
-    # Enable the contact form by entering your Formspree.io endpoint url
-    formspree_action = "https://formspree.io/sample/of/endpoint"
-    contact_form_ajax = false
+    # EmailJS configuration - Free email service, no backend required
+    # Setup instructions:
+    # 1. Sign up at https://www.emailjs.com/ (free tier: 200 emails/month)
+    # 2. Create an email service (Gmail, Outlook, etc.)
+    # 3. Create an email template
+    # 4. Get your Public Key, Service ID, and Template ID from EmailJS dashboard
+    # 5. Enter them below
+    enableEmailJS = true
+    emailjs_public_key = "_KrZ0VDsmSR6Oggjy"
+    emailjs_service_id = "service_z8gzxcs"
+    emailjs_template_id = "template_4yewmfn"
 
     # Formspree form supports Google reCAPTCHA Key (type v2).
     # If you use this feature, you should enable reCAPTCHA feature in the Formspree dashboard.
@@ -194,7 +163,7 @@ pluralizelisttitles = false
     googleRecaptchaKey = "site_key_for_google_recaptcha"
 
     # about_us = "<p>CoastResusGroup provides professional resuscitation training and medical education services.</p>"
-    copyright = "Copyright (c) 2024, CoastResusGroup; all rights reserved."
+    copyright = "Copyright © 2024, CoastResusGroup; all rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"

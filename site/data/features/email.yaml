@@ -1,5 +1,5 @@
 weight: 5
-name: "Emergency Response Training"
-icon: "fas fa-ambulance"
-url: "/courses/"
-description: "Specialized emergency response training for first responders, healthcare teams, and emergency personnel. Advanced protocols for cardiac emergencies, trauma response, and critical care situations with realistic simulation scenarios."
+name: "Recertification Programs"
+icon: "fas fa-sync-alt"
+url: "/recertification/"
+description: "Focused recertification programs to help healthcare professionals maintain their advanced life support skills. Stay current with latest guidelines and efficiently renew your certification with our intensive one-day programs."

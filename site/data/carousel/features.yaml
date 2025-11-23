@@ -1,11 +1,7 @@
-weight: 2
-title: "BLS - Intermediate Life Support"
-description: >
-  <ul class="list-style-none">
-     <li>Essential life-saving techniques</li>
-     <li>CPR and AED training</li>
-     <li>Emergency response protocols</li>
-     <li>Certified instructor-led courses</li>
-   </ul>
+weight: 1
+title: "ARC ALS Level 1"
+description: "<p>Comprehensive one-day Advanced Life Support training<br>for healthcare professionals.</p>"
 image: "img/carousel/BLS.png"
-href: "/courses/"
+href: "/als1-basic/"
+button_color: "#0e6cb3"
+button_text_color: "#ffffff"

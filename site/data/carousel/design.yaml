@@ -1,11 +1,7 @@
 weight: 3
-title: "TNCC - Trauma Nursing Core Course"
-description: >
-  <ul class="list-style-none">
-    <li>Comprehensive trauma nursing education</li>
-    <li>Evidence-based practice protocols</li>
-    <li>Hands-on simulation training</li>
-    <li>Professional certification program</li>
-  </ul>
+title: "Trauma Nursing Core Course (TNCC)"
+description: "<p>Two-day intensive program for nurses focusing on systematic<br>trauma assessment and early intervention.</p>"
 image: "img/carousel/TNCC.png"
-href: "/custom-courses/"
+href: "/tncc/"
+button_color: "#ad150e"
+button_text_color: "#ffffff"

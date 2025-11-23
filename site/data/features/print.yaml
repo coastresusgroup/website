@@ -1,5 +1,5 @@
 weight: 2
-name: "Basic Life Support"
-icon: "fas fa-first-aid"
-url: "/courses/"
-description: "Essential Basic Life Support training for healthcare providers and first responders. Learn CPR, AED usage, and fundamental life-saving techniques with practical scenarios and certification programs."
+name: "Advanced Life Support Level 2"
+icon: "fas fa-stethoscope"
+url: "/als2-advanced/"
+description: "Comprehensive two-day advanced training program for healthcare professionals managing critically ill patients. Advanced clinical assessment, management of life-threatening conditions, and effective team-based resuscitation."
