@@ -6,6 +6,8 @@ type = "page"
 
 # We are here to help you
 
-Are you curious about something? Do you have some kind of problem with our products? As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built gay party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.
+Have questions about our courses? Need assistance with registration or course information? Our team is ready to help you with any enquiries about our Advanced Life Support and Trauma Nursing Core Course programs.
 
-Please feel free to contact us, our customer service center is working for you 24/7.
+Whether you're looking to book a course, need information about certification requirements, or have questions about our training programs, we're here to assist you. Please don't hesitate to reach out—we aim to respond to all enquiries within 48 hours during business days.
+
+Please feel free to contact us using the form below or email us directly at **coastresusgroup@gmail.com**.
