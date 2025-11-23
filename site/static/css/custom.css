@@ -18,6 +18,9 @@
 #heading-breadcrumbs {
   position: relative;
   overflow: visible;
+  background: url('../img/texture-green.png') center center repeat !important; /* Use colored texture instead of grey */
+  padding: 20px 0;
+  margin-bottom: 40px;
 }
 
 #heading-breadcrumbs .container {
