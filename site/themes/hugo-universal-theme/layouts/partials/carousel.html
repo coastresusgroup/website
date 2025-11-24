@@ -11,21 +11,25 @@
                 data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
                 {{ range sort .Site.Data.carousel "weight" }}
                 <div class="item">
-                    {{ if .href }}
-                    <a href="{{ .href }}" target="_blank" title="{{ .title | safeHTML }}">
-                    {{ end }}
-                        <div class="row">
-                            <div class="col-sm-5 right">
-                                <h1>{{ .title | safeHTML }}</h1>
-                                {{ .description | safeHTML }}
+                    <div class="row">
+                        <div class="col-sm-5 right">
+                            <h1>{{ .title | safeHTML }}</h1>
+                            {{ .description | safeHTML }}
+                            {{ if .href }}
+                            <a href="{{ .href }}" class="btn carousel-learn-more-btn" style="background-color: {{ .button_color | default "#0e6cb3" }}; color: {{ .button_text_color | default "#ffffff" }}; margin-top: 20px;">
+                                Learn More
+                            </a>
+                            {{ end }}
+                            {{ if .logo }}
+                            <div class="carousel-logo" style="margin-top: 20px;">
+                                <img src="{{ .logo | relURL }}" alt="" style="max-height: 80px; width: auto;">
                             </div>
-                            <div class="col-sm-7">
-                                <img class="img-responsive" src="{{ .image }}" alt="">
-                            </div>
+                            {{ end }}
                         </div>
-                    {{ if .href }}
-                    </a>
-                    {{ end }}
+                        <div class="col-sm-7">
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/coastresusgroup?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                        </div>
+                    </div>
                 </div>
                 {{ end }}
             </div>

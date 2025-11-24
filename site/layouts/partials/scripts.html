@@ -21,13 +21,100 @@
 
 <!-- owl carousel -->
 <script src="{{ "js/owl.carousel.min.js" | relURL }}"></script>
+<script>
+// Initialize college logos carousel after owlCarousel loads
+(function() {
+  function initCollegeLogosCarousel() {
+    if (typeof jQuery !== 'undefined' && typeof jQuery.fn !== 'undefined' && typeof jQuery.fn.owlCarousel !== 'undefined') {
+      var $carousel = jQuery('.college-logos-carousel');
+      if ($carousel.length && !$carousel.hasClass('owl-loaded')) {
+        try {
+          $carousel.owlCarousel({
+            items: ($carousel.attr('data-items') || 5),
+            slideSpeed: ($carousel.attr('data-slide-speed') || 3000),
+            paginationSpeed: ($carousel.attr('data-pagination-speed') || 1000),
+            autoPlay: ($carousel.attr('data-autoplay') || 'true') === 'true',
+            navigation: false,
+            pagination: false,
+            loop: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: false,
+            itemsDesktopSmall: [990, 5],
+            itemsTablet: [768, 4],
+            itemsMobile: [480, 2]
+          });
+        } catch(e) {
+          console.error('Error initializing college logos carousel:', e);
+          setTimeout(initCollegeLogosCarousel, 300);
+        }
+      }
+    } else {
+      // Retry if owlCarousel isn't loaded yet
+      setTimeout(initCollegeLogosCarousel, 100);
+    }
+  }
+  
+  // Wait for owlCarousel script to load, then initialize
+  var checkOwlCarousel = setInterval(function() {
+    if (typeof jQuery !== 'undefined' && typeof jQuery.fn !== 'undefined' && typeof jQuery.fn.owlCarousel !== 'undefined') {
+      clearInterval(checkOwlCarousel);
+      // Wait a bit more for DOM to be ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          setTimeout(initCollegeLogosCarousel, 100);
+        });
+      } else {
+        setTimeout(initCollegeLogosCarousel, 100);
+      }
+    }
+  }, 50);
+  
+  // Fallback: try on window load
+  window.addEventListener('load', function() {
+    setTimeout(initCollegeLogosCarousel, 200);
+  });
+  
+  // Timeout after 5 seconds to stop checking
+  setTimeout(function() {
+    clearInterval(checkOwlCarousel);
+  }, 5000);
+})();
+</script>
 
-<!-- Calendly badge widget -->
+<!-- Calendly popup script -->
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/coastresusgroup', text: 'Book Now', color: '#e76a1e', textColor: '#ffffff', branding: false }); }</script>
+<script>
+(function initFloatingBookNow() {
+  function bindCalendlyButton() {
+    var btn = document.querySelector('.floating-book-now-btn')
+    if (!btn) return
+    btn.addEventListener('click', function (e) {
+      e.preventDefault()
+      if (window.Calendly) {
+        Calendly.initPopupWidget({
+          url: 'https://calendly.com/coastresusgroup?hide_gdpr_banner=1'
+        })
+      } else {
+        window.open('https://calendly.com/coastresusgroup', '_blank')
+      }
+    })
+  }
 
-<!-- ARC logo next to Book Now button -->
-<div class="arc-logo-floating">
-  <img src="/img/ARC_main.png" alt="ARC" />
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindCalendlyButton)
+  } else {
+    bindCalendlyButton()
+  }
+})()
+</script>
+
+<!-- Floating booking cluster -->
+<div class="floating-booking-cluster">
+  <button class="floating-book-now-btn">Book Now</button>
+  <div class="floating-partner-logos">
+    <img src="/img/ARC_main.png" alt="Australian Resuscitation Council" />
+    <img src="/img/RA_Logo.svg" alt="Resuscitation Australia" />
+    <img src="/img/ENA.svg" alt="Emergency Nurses Association" />
+  </div>
 </div>
 

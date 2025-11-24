@@ -56,15 +56,27 @@ pluralizelisttitles = false
     parent     = "menu.courses"
 
 [[menu.main]]
+    name       = "RA ALS Level 1"
+    url        = "/ra-als1/"
+    weight     = 2
+    parent     = "menu.courses"
+
+[[menu.main]]
     name       = "ARC ALS Level 2"
     url        = "/als2-advanced/"
-    weight     = 2
+    weight     = 3
+    parent     = "menu.courses"
+
+[[menu.main]]
+    name       = "RA ALS Level 2"
+    url        = "/ra-als2/"
+    weight     = 4
     parent     = "menu.courses"
 
 [[menu.main]]
     name       = "Trauma Nursing Core Course (TNCC)"
     url        = "/tncc/"
-    weight     = 3
+    weight     = 5
     parent     = "menu.courses"
 
 [[menu.main]]
@@ -242,10 +254,10 @@ pluralizelisttitles = false
 [params.see_more]
     enable = true
     icon = "fas fa-users"
-    title = "Need Custom Training or Bulk Bookings?"
-    subtitle = "Looking for specialized courses tailored to your organization's needs? We offer custom training programs, bulk booking discounts, and on-site training options for healthcare facilities, emergency services, and corporate clients."
-    link_url = "/custom-courses/"
-    link_text = "Explore Custom Training Options"
+    title = "Interested in a private group booking?"
+    subtitle = "We offer private bookings for groups of 6 or more. Contact us today to discuss bringing a training session to you."
+    link_url = "/contact/"
+    link_text = "Contact us"
 
 [params.clients]
     enable = true

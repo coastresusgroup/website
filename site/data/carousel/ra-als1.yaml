@@ -1,8 +1,9 @@
-weight: 1
-title: "ARC ALS Level 1"
+weight: 2
+title: "RA ALS Level 1"
 description: "<p>Comprehensive one-day Advanced Life Support training<br>for healthcare professionals.</p>"
 image: "img/carousel/BLS.png"
-logo: "img/ARC_main.png"
-href: "/als1-basic/"
+logo: "img/RA_Logo.svg"
+href: "/ra-als1/"
 button_color: "#0e6cb3"
 button_text_color: "#ffffff"
+

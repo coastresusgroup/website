@@ -1,7 +1,8 @@
-weight: 3
+weight: 5
 title: "Trauma Nursing Core Course (TNCC)"
 description: "<p>Two-day intensive program for nurses focusing on systematic<br>trauma assessment and early intervention.</p>"
 image: "img/carousel/TNCC.png"
+logo: "img/ENA.svg"
 href: "/tncc/"
 button_color: "#ad150e"
 button_text_color: "#ffffff"

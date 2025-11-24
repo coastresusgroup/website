@@ -23,6 +23,31 @@ $(function () {
   contactFormAjax()
 })
 
+// Also try to initialize on window load as a fallback
+$(window).on('load', function() {
+  initCollegeLogosCarousel()
+  matchCarouselWrapperToButton()
+})
+
+// Match carousel button-logo wrapper width to button width
+function matchCarouselWrapperToButton() {
+  $('.carousel-button-logo-wrapper').each(function() {
+    const $wrapper = $(this)
+    const $button = $wrapper.find('.carousel-learn-more-btn')
+    if ($button.length) {
+      const buttonWidth = $button[0].offsetWidth
+      if (buttonWidth > 0) {
+        $wrapper[0].style.setProperty('width', buttonWidth + 'px', 'important')
+      }
+    }
+  })
+}
+
+// Also call after carousel is initialized
+$(document).ready(function() {
+  setTimeout(matchCarouselWrapperToButton, 500)
+})
+
 // Ajax contact
 function contactFormAjax () {
   const form = $('.contact-form-ajax')
@@ -127,11 +152,50 @@ function sliders () {
       addClassActive: true,
       afterInit: function () {
         // animationsSlider()
+        matchCarouselWrapperToButton()
       },
       afterMove: function () {
         // animationsSlider()
+        matchCarouselWrapperToButton()
       }
     })
+  }
+  
+  // Initialize college logos carousel separately to ensure it's found
+  initCollegeLogosCarousel()
+}
+
+// Initialize college logos carousel - call this function
+function initCollegeLogosCarousel() {
+  var $carousel = $('.college-logos-carousel')
+  if ($carousel.length && typeof $.fn.owlCarousel !== 'undefined') {
+    // Check if already initialized
+    if ($carousel.hasClass('owl-loaded')) {
+      return
+    }
+    try {
+      $carousel.owlCarousel({
+        items: ($carousel.attr('data-items') || 5),
+        slideSpeed: ($carousel.attr('data-slide-speed') || 3000),
+        paginationSpeed: ($carousel.attr('data-pagination-speed') || 1000),
+        autoPlay: ($carousel.attr('data-autoplay') || 'true') === 'true',
+        navigation: false,
+        pagination: false,
+        loop: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: false,
+        itemsDesktopSmall: [990, 5],
+        itemsTablet: [768, 4],
+        itemsMobile: [480, 2]
+      })
+    } catch(e) {
+      console.error('Error initializing college logos carousel:', e)
+      // Retry after a delay if owlCarousel isn't ready
+      setTimeout(initCollegeLogosCarousel, 500)
+    }
+  } else if ($carousel.length) {
+    // Retry if carousel exists but owlCarousel isn't loaded yet
+    setTimeout(initCollegeLogosCarousel, 500)
   }
 }
 
@@ -380,6 +444,7 @@ $(window).resize(function () {
       $(this).alignElementsSameHeight()
       fullScreenContainer()
       pictureZoom()
+      matchCarouselWrapperToButton()
     }, 205)
     windowWidth = newWindowWidth
   }

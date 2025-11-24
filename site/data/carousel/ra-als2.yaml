@@ -1,8 +1,9 @@
-weight: 3
-title: "ARC ALS Level 2"
+weight: 4
+title: "RA ALS Level 2"
 description: "<p>Comprehensive two-day advanced training program<br>for healthcare professionals managing critically ill patients.</p>"
 image: "img/carousel/ALS.png"
-logo: "img/ARC_main.png"
-href: "/als2-advanced/"
+logo: "img/RA_Logo.svg"
+href: "/ra-als2/"
 button_color: "#e76a1e"
 button_text_color: "#ffffff"
+

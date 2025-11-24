@@ -15,11 +15,20 @@
                         <div class="col-sm-5 right">
                             <h1>{{ .title | safeHTML }}</h1>
                             {{ .description | safeHTML }}
-                            {{ if .href }}
-                            <div class="carousel-button-wrapper">
-                                <a href="{{ .href }}" class="carousel-learn-more-btn" style="{{ if .button_color }}background-color: {{ .button_color }} !important;{{ end }}color: #ffffff !important;">
-                                    Learn More
-                                </a>
+                            {{ if or .href .logo }}
+                            <div class="carousel-button-logo-wrapper">
+                                {{ if .href }}
+                                <div class="carousel-button-wrapper">
+                                    <a href="{{ .href }}" class="carousel-learn-more-btn" style="{{ if .button_color }}background-color: {{ .button_color }} !important;{{ end }}color: #ffffff !important;">
+                                        Learn More
+                                    </a>
+                                </div>
+                                {{ end }}
+                                {{ if .logo }}
+                                <div class="carousel-logo">
+                                    <img src="{{ .logo | relURL }}" alt="">
+                                </div>
+                                {{ end }}
                             </div>
                             {{ end }}
                         </div>
