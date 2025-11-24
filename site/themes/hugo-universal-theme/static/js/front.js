@@ -21,12 +21,17 @@ $(function () {
   counters()
   demo()
   contactFormAjax()
+  contactFormEmailJS()
 })
 
 // Also try to initialize on window load as a fallback
 $(window).on('load', function() {
   initCollegeLogosCarousel()
   matchCarouselWrapperToButton()
+})
+
+$(window).on('load', function () {
+  contactFormEmailJS()
 })
 
 // Match carousel button-logo wrapper width to button width
@@ -65,6 +70,84 @@ function contactFormAjax () {
       }
       , 'json')
     return false
+  })
+}
+
+function contactFormEmailJS () {
+  if (typeof emailjs === 'undefined') {
+    return
+  }
+  const forms = document.querySelectorAll('.contact-form-emailjs')
+  if (!forms.length) {
+    return
+  }
+
+  forms.forEach(function (form, index) {
+    if (form.dataset.emailjsBound === 'true') {
+      return
+    }
+
+    const publicKey = form.getAttribute('data-emailjs-public-key')
+    const serviceId = form.getAttribute('data-emailjs-service-id')
+    const templateId = form.getAttribute('data-emailjs-template-id')
+
+    if (!publicKey || !serviceId || !templateId) {
+      console.warn('EmailJS form missing configuration data attributes', form)
+      return
+    }
+
+    if (!window.__emailjsInitialized) {
+      try {
+        emailjs.init(publicKey)
+        window.__emailjsInitialized = true
+      } catch (e) {
+        console.error('Failed to initialize EmailJS', e)
+        return
+      }
+    }
+
+    let statusTarget = form.previousElementSibling
+    if (!statusTarget || statusTarget.id.indexOf('contact-message') === -1) {
+      statusTarget = document.createElement('div')
+      statusTarget.className = 'contact-form-status'
+      form.parentNode.insertBefore(statusTarget, form)
+    } else if (statusTarget.id === 'contact-message') {
+      statusTarget.id = 'contact-message-' + index
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault()
+
+      const nameField = form.querySelector('[name="name"]')
+      const emailField = form.querySelector('[name="email"]')
+      const messageField = form.querySelector('[name="message"]')
+
+      const payload = {
+        name: nameField ? nameField.value : '',
+        email: emailField ? emailField.value : '',
+        message: messageField ? messageField.value : ''
+      }
+
+      if (statusTarget) {
+        statusTarget.innerHTML = '<div class="alert alert-info" role="alert">Sending your message...</div>'
+      }
+
+      emailjs.send(serviceId, templateId, payload)
+        .then(function () {
+          if (statusTarget) {
+            statusTarget.innerHTML = '<div class="alert alert-success" role="alert">Thank you for reaching out! We will respond shortly.</div>'
+          }
+          form.reset()
+        })
+        .catch(function (error) {
+          console.error('EmailJS send failed', error)
+          if (statusTarget) {
+            statusTarget.innerHTML = '<div class="alert alert-danger" role="alert">Something went wrong while sending your message. Please email us at <a href="mailto:coastresusgroup@gmail.com">coastresusgroup@gmail.com</a>.</div>'
+          }
+        })
+    })
+
+    form.dataset.emailjsBound = 'true'
   })
 }
 
