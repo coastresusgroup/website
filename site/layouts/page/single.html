@@ -23,7 +23,7 @@
         </div>
         {{ end }}
 
-        <div id="content">
+        <div id="content" class="{{ if eq .RelPermalink "/terms-and-conditions/" }}terms-body{{ end }}">
             {{ if isset .Params "id" }}
 
               {{ partial .Params.id . }}
