@@ -24,9 +24,11 @@ Requests must be submitted by email to: coastresusgroup@gmail.com.
 
 We understand that circumstances can change. Due to certification requirements, pre-course preparation, and fairness to other waitlisted participants, the following applies after the 24-hour cooling-off period:
 
-- **More than 42 days before course:** Full refund minus $75 administration fee
-- **42 – 30 days before course:** 50% refund of course fees
-- **Less than 30 days before course:** No refund available
+**More than 42 days before course:** Full refund minus $75 administration fee.
+
+**42 – 30 days before course:** 50% refund of course fees.
+
+**Less than 30 days before course:** No refund available.
 
 ## 4. COURSE TRANSFERS
 
@@ -50,60 +52,27 @@ We understand that circumstances can change. Due to certification requirements, 
 
 ## 6. SUBSTITUTE PARTICIPANTS
 
-You may nominate another participant provided that:
-
-- Written notification is given at least 30 days before the course date
-- The substitute meets all course prerequisites
-- Coast Resuscitation Group approves the substitution
-
-**Administration Fee:** $75 applies for approved substitutions.
+You may nominate another participant provided that written notification is given at least 30 days before the course date, the substitute meets all course prerequisites, and Coast Resuscitation Group approves the substitution. An administration fee of $75 applies for approved substitutions.
 
 ## 7. COMPANY CANCELLATION POLICY
 
-If Coast Resuscitation Group cancels a course due to unforeseen circumstances:
-
-- Participants will be offered an alternative date at no additional cost.
-- If no suitable alternative is available, a full refund will be issued.
-- Coast Resuscitation Group accepts no liability for travel, accommodation, or other additional expenses.
+If Coast Resuscitation Group cancels a course due to unforeseen circumstances, participants will be offered an alternative date at no additional cost. If no suitable alternative is available, a full refund will be issued. Coast Resuscitation Group accepts no liability for travel, accommodation, or other additional expenses.
 
 ## 8. REFUND PROCESSING
 
-- All requests must be submitted in writing to coastresusgroup@gmail.com.
-- Refunds will be processed within 14 business days of receiving written notice.
-- Refunds are made via the original payment method.
-- Postage, handling, or administrative fees are non-refundable.
+All requests must be submitted in writing to coastresusgroup@gmail.com. Refunds will be processed within 14 business days of receiving written notice, via the original payment method. Postage, handling, or administrative fees are non-refundable.
 
 ## 9. LIABILITY LIMITATIONS
 
-Coast Resuscitation Group's maximum liability is limited to the refund conditions specified in this policy.
-
-We accept no liability for:
-
-- Travel expenses
-- Accommodation costs
-- Lost wages or opportunity costs
-- Personal property damage or loss
-- Consequential or indirect damages
-
-Participation is at the individual's own risk. Coast Resuscitation Group is not liable for injuries or damages sustained during course activities.
+Coast Resuscitation Group's maximum liability is limited to the refund conditions specified in this policy. We accept no liability for travel expenses, accommodation costs, lost wages or opportunity costs, personal property damage or loss, or consequential and indirect damages. Participation is at the individual's own risk. Coast Resuscitation Group is not liable for injuries or damages sustained during course activities.
 
 ## 10. PRIVACY & SECURITY
 
-Coast Resuscitation Group is committed to protecting your privacy.
-
-Personal information is kept strictly confidential and is never shared, sold, or exchanged with third parties.
-
-Information is collected and used solely for:
-
-- Processing bookings
-- Providing course updates and communications
-- Maintaining training records as required by accrediting bodies
+Coast Resuscitation Group is committed to protecting your privacy. Personal information is kept strictly confidential and is never shared, sold, or exchanged with third parties. Information is collected and used solely for processing bookings, providing course updates and communications, and maintaining training records as required by accrediting bodies.
 
 ## 11. COURSE COMPLETION REQUIREMENTS
 
-- Courses must be completed within 12 months of the original booking date.
-- All course components (theory, practical, assessment) must be successfully completed for certification.
-- Participants who do not meet requirements are not entitled to refunds.
+Courses must be completed within 12 months of the original booking date. All course components (theory, practical, assessment) must be successfully completed for certification. Participants who do not meet requirements are not entitled to refunds.
 
 ## 12. CONSUMER RIGHTS UNDER LAW
 
@@ -113,17 +82,11 @@ Nothing in these terms is intended to limit or exclude statutory rights or remed
 
 ## 13. POLICY UPDATES
 
-- Coast Resuscitation Group reserves the right to review and update these terms at any time.
-- Updates will be published on our website and reasonable notice will be provided to existing bookings.
-- Continued use of our services after updates constitutes acceptance of revised terms.
+Coast Resuscitation Group reserves the right to review and update these terms at any time. Updates will be published on our website and reasonable notice will be provided to existing bookings. Continued use of our services after updates constitutes acceptance of revised terms.
 
 ## 14. CONTACT INFORMATION
 
-For all cancellations, transfers, or policy inquiries:
-
-- **Email:** coastresusgroup@gmail.com
-- **Subject Line:** Use "CANCELLATION", "TRANSFER", or "POLICY INQUIRY" as appropriate
-- **Response Time:** We aim to respond to all inquiries within 48 hours (business days)
+For all cancellations, transfers, or policy inquiries please email coastresusgroup@gmail.com with “CANCELLATION”, “TRANSFER”, or “POLICY INQUIRY” in the subject line. We aim to respond to all inquiries within 48 hours (business days).
 
 By booking a course with Coast Resuscitation Group, you confirm that you have read, understood, and agree to these Terms and Conditions.
 
