@@ -1,5 +1,5 @@
 +++
-title = "Terms and Conditions"
+title = "Cancellation, Refund & Terms of Service Policy"
 description = "Terms and conditions, cancellation policy, and refund policy for Coast Resuscitation Group"
 type = "page"
 +++
