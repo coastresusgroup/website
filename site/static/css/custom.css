@@ -6,6 +6,11 @@
   color: #333333 !important;
 }
 
+#content.terms-body .container .row .col-md-12 > div > p:first-of-type,
+#content.terms-body .container .row .col-md-12 > div > p:not(:first-of-type) {
+  font-size: 18px !important;
+}
+
 #content.terms-body ul,
 #content.terms-body ol {
   margin-left: 1.25rem !important;
