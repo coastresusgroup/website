@@ -4,8 +4,6 @@ description = "Terms and conditions, cancellation policy, and refund policy for 
 type = "page"
 +++
 
-# Terms and Conditions / Cancellation Policy
-
 ## Coast Resuscitation Group
 
 ### Cancellation, Refund & Terms of Service Policy
