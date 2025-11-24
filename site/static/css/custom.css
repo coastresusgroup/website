@@ -1,8 +1,18 @@
-#content.terms-body p {
+#content.terms-body p,
+#content.terms-body li {
   font-size: 18px !important;
   line-height: 1.8 !important;
-  margin-bottom: 18px !important;
+  margin-bottom: 16px !important;
   color: #333333 !important;
+}
+
+#content.terms-body ul,
+#content.terms-body ol {
+  margin-left: 1.25rem !important;
+}
+
+#content.terms-body li strong {
+  font-size: inherit !important;
 }
 
 #content.terms-body h2,
