@@ -7,9 +7,9 @@
   --accent-orange: #e76a1e;
 }
 
-/* Make page titles 2x bigger (FAQ and About page) */
+/* Make page titles bolder yet compact */
 #heading-breadcrumbs h1 {
-  font-size: 60px !important; /* 2x the original 30px */
+  font-size: 36px !important; /* 60% of previous 60px */
   color: #ffffff !important; /* White text */
   text-shadow: 2px 2px 3px rgba(51, 51, 51, 0.7) !important; /* Slightly transparent grey drop shadow with slight blur */
 }

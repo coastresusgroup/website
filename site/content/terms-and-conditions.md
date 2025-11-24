@@ -4,14 +4,6 @@ description = "Terms and conditions, cancellation policy, and refund policy for 
 type = "page"
 +++
 
-## Coast Resuscitation Group
-
-### Cancellation, Refund & Terms of Service Policy
-
-**Last Updated: August 2025**
-
-**Contact:** coastresusgroup@gmail.com
-
 ## 1. BOOKING CONFIRMATION & PAYMENT
 
 Course bookings are only confirmed upon receipt of full payment and written confirmation (email) from Coast Resuscitation Group.
