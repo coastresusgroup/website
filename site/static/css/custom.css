@@ -320,6 +320,13 @@ a:focus {
 }
 
 /* Features section */
+.features-bar {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .features .feature-box {
   border-color: var(--accent-cyan) !important;
 }
@@ -773,6 +780,7 @@ html body .navbar-header .navbar-brand img {
 .carousel-widget-side {
   display: flex;
   align-items: stretch;
+  padding-bottom: 25px;
 }
 
 .carousel-widget-container {
@@ -801,6 +809,9 @@ html body .navbar-header .navbar-brand img {
   .carousel-widget-side,
   .home-carousel-layout > div {
     margin-bottom: 30px;
+  }
+  .carousel-widget-side {
+    padding-bottom: 15px;
   }
   .carousel-widget-container {
     min-height: 500px;
