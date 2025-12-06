@@ -6,7 +6,7 @@
         <div class="dark-mask"></div>
         <div class="container">
             <div class="row home-carousel-layout">
-                <div class="col-md-8 col-sm-12">
+                <div class="col-md-6 col-sm-12">
                     <div class="homepage owl-carousel"
                         data-autoplay="{{ default true .Site.Params.CarouselHomepage.auto_play }}"
                         data-slide-speed="{{ default 2000 .Site.Params.CarouselHomepage.slide_speed }}"
@@ -14,7 +14,7 @@
                         {{ range $index, $item := sort .Site.Data.carousel "weight" }}
                         <div class="item" data-carousel-index="{{ $index }}">
                             <div class="row carousel-item-row">
-                                <div class="col-sm-6 carousel-text-col">
+                                <div class="col-xs-12 carousel-text-col">
                                     <h1>{{ $item.title | safeHTML }}</h1>
                                     {{ $item.description | safeHTML }}
                                     {{ if or $item.href $item.logo }}
@@ -34,7 +34,7 @@
                                     </div>
                                     {{ end }}
                                 </div>
-                                <div class="col-sm-6 carousel-image-col">
+                                <div class="col-xs-12 carousel-image-col">
                                     {{ if $item.image }}
                                     <div class="carousel-image-wrapper">
                                         <img src="{{ $item.image | relURL }}" alt="{{ $item.title }}">
@@ -47,22 +47,9 @@
                     </div>
                     <!-- /.project owl-slider -->
                 </div>
-                <div class="col-md-4 col-sm-12 carousel-widget-side">
+                <div class="col-md-6 col-sm-12 carousel-widget-side">
                     <div class="carousel-widget-container">
-                        {{ range $index, $item := sort .Site.Data.carousel "weight" }}
-                        <div class="bookeo-widget-item" data-carousel-index="{{ $index }}" style="display:{{ if eq $index 0 }}block{{ else }}none{{ end }};">
-                            {{ if eq $item.bookeo_type "coming_soon" }}
-                            <div style="min-width:320px;height:700px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:8px;">
-                                <div style="text-align:center;padding:20px;">
-                                    <h3 style="color:#333;margin-bottom:10px;font-size:24px;">Coming Soon</h3>
-                                    <p style="color:#666;font-size:16px;">Booking for this course will be available soon.</p>
-                                </div>
-                            </div>
-                            {{ else }}
-                            <script type="text/javascript" src="https://bookeo.com/widget.js?a=33503UKWPH19AE3851031&type={{ $item.bookeo_type }}"></script>
-                            {{ end }}
-                        </div>
-                        {{ end }}
+                        <script type="text/javascript" src="https://bookeo.com/widget.js?a=33503UKWPH19AE3851031"></script>
                     </div>
                 </div>
             </div>

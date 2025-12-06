@@ -53,26 +53,6 @@ $(document).ready(function() {
   setTimeout(matchCarouselWrapperToButton, 500)
 })
 
-// Show the correct Bookeo widget based on active carousel slide
-function showBookeoWidget() {
-  const activeItem = document.querySelector('.homepage .owl-item.active .item')
-  if (!activeItem) return
-
-  const activeIndex = activeItem.getAttribute('data-carousel-index')
-  if (activeIndex === null) return
-
-  // Hide all widget items
-  const widgetItems = document.querySelectorAll('.bookeo-widget-item')
-  widgetItems.forEach(function(item) {
-    item.style.display = 'none'
-  })
-
-  // Show the widget matching the active carousel item
-  const targetWidget = document.querySelector('.bookeo-widget-item[data-carousel-index="' + activeIndex + '"]')
-  if (targetWidget) {
-    targetWidget.style.display = 'block'
-  }
-}
 
 // Ajax contact
 function contactFormAjax () {
@@ -257,12 +237,10 @@ function sliders () {
       afterInit: function () {
         // animationsSlider()
         matchCarouselWrapperToButton()
-        showBookeoWidget()
       },
       afterMove: function () {
         // animationsSlider()
         matchCarouselWrapperToButton()
-        showBookeoWidget()
       }
     })
   }
