@@ -17,11 +17,7 @@ Learning here also comes with the relaxed coastal lifestyle that the Gold Coast 
 
 ## About Us
 
-Coast Resuscitation Group was founded by two Registered Nurses from Northern NSW with experience in:
-- Critical care
-- Paediatrics
-- Maternity
-- Clinical education
+Coast Resuscitation Group was founded by two Registered Nurses from Northern NSW with experience in critical care, paediatrics, maternity and clinical education.
 
 Alongside raising a young family, we are actively involved in surf lifesaving at Rainbow Bay SLSC, which reflects our commitment to community, safety, and education.
 
