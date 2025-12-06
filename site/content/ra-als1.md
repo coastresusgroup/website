@@ -121,11 +121,12 @@ type = "page"
     <h2>Ready to Begin Your Training?</h2>
     <p>Start your ALS Level 1 journey today and enhance your life support capabilities.</p>
     <div class="cta-calendly-widget">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/coastresusgroup?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://bookeo.com/widget.js?a=33503UKWPH19AE3851031&type=33504TUFWH19AE7926D52"></script>
     </div>
     <div class="cta-buttons">
       <a href="/contact/" class="btn-secondary">Contact Us</a>
     </div>
   </div>
 </div>
+
 

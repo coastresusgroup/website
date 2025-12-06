@@ -134,7 +134,7 @@ type = "page"
     <h2>Ready to Advance Your Skills?</h2>
     <p>Take your ALS capabilities to the next level with our comprehensive Level 2 training.</p>
     <div class="cta-calendly-widget">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/coastresusgroup?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://bookeo.com/widget.js?a=33503UKWPH19AE3851031&type=3350JLLW6M19AE3E3AF75"></script>
     </div>
     <div class="cta-buttons">
       <a href="/contact/" class="btn-secondary">Contact Us</a>
