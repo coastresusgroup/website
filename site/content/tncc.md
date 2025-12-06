@@ -137,14 +137,6 @@ type = "page"
   <div class="course-card cta-card">
     <h2>Ready to Enhance Your Trauma Nursing Skills?</h2>
     <p>Take your trauma care capabilities to the next level with our comprehensive TNCC training.</p>
-    <div class="cta-calendly-widget">
-      <div style="min-width:320px;height:700px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:8px;">
-        <div style="text-align:center;padding:20px;">
-          <h3 style="color:#333;margin-bottom:10px;font-size:24px;">Coming Soon</h3>
-          <p style="color:#666;font-size:16px;">Booking for this course will be available soon.</p>
-        </div>
-      </div>
-    </div>
     <div class="cta-buttons">
       <a href="/contact/" class="btn-secondary">Contact Us</a>
     </div>
