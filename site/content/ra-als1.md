@@ -7,7 +7,7 @@ type = "page"
 <div class="course-hero">
   <div class="course-hero-content">
     <h1>Resuscitation Australia Advanced Life Support (ALS) Level 1</h1>
-    <p class="course-subtitle">Comprehensive one-day training for healthcare professionals</p>
+    <p class="course-subtitle">Comprehensive half-day training for healthcare professionals</p>
   </div>
 </div>
 
@@ -15,12 +15,12 @@ type = "page"
   <div class="info-card">
     <div class="info-icon">📅</div>
     <h3>Duration</h3>
-    <p>1 day</p>
+    <p>Half-day + e-Learning</p>
   </div>
   <div class="info-card">
     <div class="info-icon">⏰</div>
     <h3>Time</h3>
-    <p>08:00am – 04:30pm</p>
+    <p>8:00am – 12:00pm or 1:00pm – 5:00pm</p>
   </div>
   <div class="info-card">
     <div class="info-icon">🎓</div>
@@ -30,7 +30,7 @@ type = "page"
   <div class="info-card">
     <div class="info-icon">🍽️</div>
     <h3>Catering</h3>
-    <p>Morning tea, lunch and afternoon tea provided</p>
+    <p>Morning or afternoon tea provided</p>
   </div>
   <div class="info-card">
     <div class="info-icon">✅</div>
@@ -44,7 +44,9 @@ type = "page"
     <div class="course-description-main">
       <div class="course-card">
         <h2>Course Description</h2>
-        <p>The RA ALS Level 1 course introduces advanced life support concepts for GPs, physicians, radiologists, registered nurses, paramedics, and medical, nursing, and paramedic students. It covers recognition and management of cardiac arrest, airway management, basic ECG interpretation, defibrillation, and effective team communication to improve patient outcomes in emergencies.</p>
+        <p>The Resuscitation Australia ALS Level 1 course equips healthcare professionals with the essential skills and knowledge to confidently manage adult resuscitation scenarios. Delivered through a blended learning approach, the program combines interactive e-Learning modules with practical, face-to-face training, allowing participants to learn at their own pace before applying their knowledge in realistic, hands-on scenarios.</p>
+        <p>Designed to build both competence and confidence, this course ensures participants can act effectively in high-pressure clinical situations. By focusing on advanced life support techniques, teamwork, and critical decision-making, participants gain practical skills that are immediately applicable in their professional practice.</p>
+        <p>Ideal for GPs, radiologists, physicians, medical and nursing students, and paramedicine students, this blended ALS Level 1 course offers unmatched flexibility and convenience without compromising the quality of learning. Completing this course ensures you meet professional resuscitation standards and positions you to respond effectively in life-saving situations.</p>
       </div>
     </div>
     <div class="course-description-sidebar">
@@ -112,7 +114,8 @@ type = "page"
 <div class="course-section">
   <div class="course-card">
     <h2>Assessment Requirements</h2>
-    <p>The Resuscitation Australia (RA) Advanced Life Support (ALS) Level 1 course employs continuous assessment throughout its duration. Candidates are evaluated via clinical simulations, including scenarios involving airway management, initial assessment, and resuscitation, to demonstrate core competencies taught during the course.</p>
+    <p>Successful completion of all e-learning modules is a prerequisite for the face-to-face training day.</p>
+    <p>Participants are assessed continuously during the face-to-face component through practical skill assessments and high-fidelity simulated clinical scenarios.</p>
   </div>
 </div>
 

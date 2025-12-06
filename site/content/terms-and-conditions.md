@@ -1,5 +1,5 @@
 +++
-title = "Cancellation, Refund & Terms of Service Policy"
+title = "Terms and Conditions"
 description = "Terms and conditions, cancellation policy, and refund policy for Coast Resuscitation Group"
 type = "page"
 +++
@@ -24,31 +24,31 @@ Requests must be submitted by email to: coastresusgroup@gmail.com.
 
 We understand that circumstances can change. Due to certification requirements, pre-course preparation, and fairness to other waitlisted participants, the following applies after the 24-hour cooling-off period:
 
-**More than 42 days before course:** Full refund minus $75 administration fee.
+More than 42 days before course: Full refund minus $75 administration fee.
 
-**42 – 30 days before course:** 50% refund of course fees.
+42 – 30 days before course: 50% refund of course fees.
 
-**Less than 30 days before course:** No refund available.
+Less than 30 days before course: No refund available.
 
 ## 4. COURSE TRANSFERS
 
-**Transfer Window:** You may transfer to another Coast Resuscitation Group course of the same type if requested at least 42 days prior to the course start date (subject to availability).
+Transfer Window: You may transfer to another Coast Resuscitation Group course of the same type if requested at least 42 days prior to the course start date (subject to availability). Your new course must be completed within 12 months of the original booking date.
 
-**Transfer Fee:** $75 administration fee per transfer.
+Transfer Fee: $75 administration fee per transfer.
 
-**How to Request:** Email coastresusgroup@gmail.com with your booking details and preferred new date.
+How to Request: Email coastresusgroup@gmail.com with your booking details and preferred new date.
 
-**Restrictions:** Transfers within 42 days of the course start date cannot be accommodated.
+Restrictions: Transfers within 42 days of the course start date cannot be accommodated.
 
 ## 5. ATTENDANCE REQUIREMENTS
 
-**Punctuality:** Participants arriving more than 15 minutes late will not be permitted entry and no refund will be provided.
+Punctuality: Participants arriving more than 30 minutes late will not be permitted entry and no refund will be provided.
 
-**Full Attendance:** Attendance for the entire course duration is mandatory for certification.
+Full Attendance: Attendance for the entire course duration is mandatory for certification.
 
-**Non-attendance:** Failure to attend without prior notice results in forfeiture of all fees.
+Non-attendance: Failure to attend without prior notice results in forfeiture of all fees.
 
-**Partial Attendance:** For multi-day courses, partial attendance is considered non-completion, with no refund.
+Partial Attendance: For multi-day courses, partial attendance is considered non-completion, with no refund.
 
 ## 6. SUBSTITUTE PARTICIPANTS
 
@@ -86,7 +86,6 @@ Coast Resuscitation Group reserves the right to review and update these terms at
 
 ## 14. CONTACT INFORMATION
 
-For all cancellations, transfers, or policy inquiries please email coastresusgroup@gmail.com with “CANCELLATION”, “TRANSFER”, or “POLICY INQUIRY” in the subject line. We aim to respond to all inquiries within 48 hours (business days).
+For all cancellations, transfers, or policy enquiries please email coastresusgroup@gmail.com with "CANCELLATION", "TRANSFER", or "POLICY ENQUIRY" in the subject line. We aim to respond to all enquiries within 48 hours (business days).
 
 By booking a course with Coast Resuscitation Group, you confirm that you have read, understood, and agree to these Terms and Conditions.
-

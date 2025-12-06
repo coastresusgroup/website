@@ -80,7 +80,7 @@ pluralizelisttitles = false
     parent     = "menu.courses"
 
 [[menu.main]]
-    name       = "FAQ"
+    name       = "FAQs"
     identifier = "menu.faq"
     url        = "/faq/"
     weight     = 6

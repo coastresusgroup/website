@@ -6,7 +6,7 @@ type = "page"
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>Australian Resuscitation Council Advanced Life Support (ALS) Level 2</h1>
+    <h1>Australian Resuscitation Council (ARC) Advanced Life Support (ALS) Level 2</h1>
     <p class="course-subtitle">Comprehensive two-day advanced training program</p>
   </div>
 </div>
@@ -15,17 +15,17 @@ type = "page"
   <div class="info-card">
     <div class="info-icon">📅</div>
     <h3>Duration</h3>
-    <p>2 days</p>
+    <p>Two-days</p>
   </div>
   <div class="info-card">
     <div class="info-icon">⏰</div>
     <h3>Time</h3>
-    <p>08:00am – 04:30pm</p>
+    <p>8:00am – 5:00pm</p>
   </div>
   <div class="info-card">
     <div class="info-icon">🎓</div>
     <h3>CPD Hours</h3>
-    <p>12 hours</p>
+    <p>25 hours</p>
   </div>
   <div class="info-card">
     <div class="info-icon">🍽️</div>
@@ -44,7 +44,9 @@ type = "page"
     <div class="course-description-main">
       <div class="course-card">
         <h2>Course Description</h2>
-        <p>The ARC Advanced Life Support (ALS) Level 2 course is a comprehensive two-day program designed for healthcare professionals who manage critically ill or deteriorating patients. It focuses on advanced clinical assessment, management of life-threatening conditions, and effective team-based resuscitation. Participants refine their skills in airway management, pharmacology, and post-resuscitation care through high-fidelity simulations and evidence-based protocols. The course is suitable for medical practitioners, nurses, paramedics, and allied health professionals seeking to enhance their advanced life support capabilities.</p>
+        <p>This is a two-day course with the focus on the developing advanced skills in managing deteriorating patient and cardiac arrest. The course is designed for healthcare professionals with who would be expected to apply those skills taught as part of their clinical duties, or to teach them on a regular basis. Appropriate participants include doctors, and nurses working in critical care areas (e.g. ED, CCU, ICU, HDU, acute admissions units) or in the resuscitation /medical emergency team, and paramedics. Candidates are sent the ALS2  manual one month prior to the course.</p>
+        <p>Medical students, nurses and other healthcare providers not covered in the groups above may be encouraged to complete the ALS1 course. Those with a particular interest in resuscitation should then consider attending an ALS2 course, where appropriate.</p>
+        <p>Prior skills and competence in CPR is an essential prerequisite to attending the course. While the course covers advanced resuscitation skills it is also designed to develop leadership and team skills in managing such emergencies.</p>
       </div>
     </div>
     <div class="course-description-sidebar">
@@ -70,39 +72,31 @@ type = "page"
     <div class="outcomes-grid">
       <div class="outcome-item">
         <span class="outcome-icon">✓</span>
-        <p>Conduct a structured primary survey using the A–E approach for critically ill or deteriorating patients.</p>
+        <p>Recognition, assessment and management of the deteriorating patient using a structured ABCDE approach (aiming to prevent cardiac arrest)</p>
       </div>
       <div class="outcome-item">
         <span class="outcome-icon">✓</span>
-        <p>Recognise and manage complex cardiac arrests, including peri-arrest situations.</p>
+        <p>Treat cardiac and/or respiratory arrest, including manual defibrillation</p>
       </div>
       <div class="outcome-item">
         <span class="outcome-icon">✓</span>
-        <p>Assess and manage tachycardia and bradycardia arrhythmias, including appropriate interventions.</p>
+        <p>Management of life-threatening arrhythmias</p>
       </div>
       <div class="outcome-item">
         <span class="outcome-icon">✓</span>
-        <p>Perform advanced airway management, ventilation, and oxygenation techniques.</p>
+        <p>Preparing and planning for post resuscitation care</p>
       </div>
       <div class="outcome-item">
         <span class="outcome-icon">✓</span>
-        <p>Interpret advanced ECG rhythms and arterial blood gases (ABGs) to guide clinical management.</p>
+        <p>Care for the deteriorating patient or patient in cardiac and/or respiratory arrest in special circumstances such as asthma, anaphylaxis, and pregnancy</p>
       </div>
       <div class="outcome-item">
         <span class="outcome-icon">✓</span>
-        <p>Assess and manage life-threatening conditions such as anaphylaxis, chest pain, and sepsis.</p>
+        <p>Lead a team, work as a team member, and use structured communication skills including giving an effective handover</p>
       </div>
       <div class="outcome-item">
         <span class="outcome-icon">✓</span>
-        <p>Demonstrate effective leadership, communication, and teamwork during high-acuity resuscitation scenarios.</p>
-      </div>
-      <div class="outcome-item">
-        <span class="outcome-icon">✓</span>
-        <p>Apply post-resuscitation care principles to optimise patient outcomes.</p>
-      </div>
-      <div class="outcome-item">
-        <span class="outcome-icon">✓</span>
-        <p>Integrate evidence-based decision-making in dynamic and complex clinical situations.</p>
+        <p>Consideration for end of life decision making</p>
       </div>
     </div>
   </div>

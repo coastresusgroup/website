@@ -15,7 +15,7 @@
 
         {{ partial "breadcrumbs.html" . }}
 
-        <div id="content" class="{{ if eq .RelPermalink "/terms-and-conditions/" }}terms-body{{ end }}">
+        <div id="content" class="{{ if or (eq .RelPermalink "/terms-and-conditions/") (eq .RelPermalink "/faq/") }}terms-body{{ end }}">
             {{ if isset .Params "id" }}
 
               {{ partial .Params.id . }}

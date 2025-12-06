@@ -6,8 +6,8 @@ type = "page"
 
 <div class="course-hero">
   <div class="course-hero-content">
-    <h1>Resuscitation Australia Advanced Life Support (ALS) Level 2</h1>
-    <p class="course-subtitle">Comprehensive two-day advanced training program</p>
+    <h1>Resuscitation Australia (RA) Advanced Life Support (ALS) Level 2</h1>
+    <p class="course-subtitle">Comprehensive one-day advanced training program</p>
   </div>
 </div>
 
@@ -15,17 +15,17 @@ type = "page"
   <div class="info-card">
     <div class="info-icon">📅</div>
     <h3>Duration</h3>
-    <p>2 days</p>
+    <p>One-day + e-Learning</p>
   </div>
   <div class="info-card">
     <div class="info-icon">⏰</div>
     <h3>Time</h3>
-    <p>08:00am – 04:30pm</p>
+    <p>8:00am – 5:00pm</p>
   </div>
   <div class="info-card">
     <div class="info-icon">🎓</div>
     <h3>CPD Hours</h3>
-    <p>12 hours</p>
+    <p>16 hours</p>
   </div>
   <div class="info-card">
     <div class="info-icon">🍽️</div>
@@ -44,7 +44,7 @@ type = "page"
     <div class="course-description-main">
       <div class="course-card">
         <h2>Course Description</h2>
-        <p>The RA Advanced Life Support (ALS) Level 2 course is a comprehensive two-day program designed for healthcare professionals who manage critically ill or deteriorating patients. It focuses on advanced clinical assessment, management of life-threatening conditions, and effective team-based resuscitation. Participants refine their skills in airway management, pharmacology, and post-resuscitation care through high-fidelity simulations and evidence-based protocols. The course is suitable for medical practitioners, nurses, paramedics, and allied health professionals seeking to enhance their advanced life support capabilities.</p>
+        <p>The Resuscitation Australia ALS 2 course is an advanced, blended-learning program for experienced healthcare professionals managing critically ill patients. Combining interactive online modules with hands-on, simulation-based training, the course emphasizes real-world decision-making, team leadership, and adaptive clinical skills. Participants gain expertise in advanced airway management, cardiac arrest recognition, emergency drug administration, and post-resuscitation care, while developing confidence in leading resuscitation teams under pressure. Designed to go beyond standard protocols, ALS2 equips clinicians with both the practical skills and critical thinking needed to respond effectively in high-stakes clinical situations.</p>
       </div>
     </div>
     <div class="course-description-sidebar">
@@ -111,21 +111,9 @@ type = "page"
 <div class="course-section">
   <div class="course-card">
     <h2>Assessment Requirements</h2>
-    <p>Assessment is continuous throughout the course and includes both knowledge and practical skills evaluation. Participants must:</p>
-    <div class="assessment-list">
-      <div class="assessment-item">
-        <span class="assessment-number">1</span>
-        <p>Complete a pre-course MCQ to assess baseline knowledge.</p>
-      </div>
-      <div class="assessment-item">
-        <span class="assessment-number">2</span>
-        <p>Complete a post-course MCQ, achieving a minimum pass mark of 80%.</p>
-      </div>
-      <div class="assessment-item">
-        <span class="assessment-number">3</span>
-        <p>Successfully complete the Cardiac Arrest Scenario testing station, demonstrating competence in advanced life support, team communication, and clinical decision-making in simulated high-acuity situations.</p>
-      </div>
-    </div>
+    <p>All mandatory e-Learning modules and associated assessment quizzes must be completed prior to the face-to-face training day. Each quiz contains 20 multiple-choice questions and requires a minimum score of 80%.</p>
+    <p>Participants must obtain the Certificate of Completion from the e-Learning platform before attending the practical training session.</p>
+    <p>During the face to face component, participants are continuously assessed through practical skill stations and high fidelity simulated clinical scenarios, including evaluation of non-technical skills such as leadership, teamwork, communication and situational awareness.</p>
   </div>
 </div>
 
