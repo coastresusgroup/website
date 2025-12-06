@@ -1622,7 +1622,7 @@ section.bar.background-image-fixed-2 .btn-template-transparent-black:active {
 
 .floating-book-now-btn {
   background: #e76a1e;
-  color: #ffffff;
+  color: #ffffff !important;
   border: none;
   border-radius: 999px;
   font-size: 20px;
@@ -1643,10 +1643,13 @@ section.bar.background-image-fixed-2 .btn-template-transparent-black:active {
   transition: opacity 0.3s ease;
 }
 
-.floating-book-now-btn:hover {
+.floating-book-now-btn:hover,
+.floating-book-now-btn:focus,
+.floating-book-now-btn:active,
+.floating-book-now-btn:visited {
   opacity: 0.9;
   text-decoration: none;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .floating-partner-logos {
