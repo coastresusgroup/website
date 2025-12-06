@@ -17,10 +17,17 @@ Learning here also comes with the relaxed coastal lifestyle that the Gold Coast 
 
 ## About Us
 
-Coast Resuscitation Group was founded by two Registered Nurses from Northern NSW with experience in critical care, paediatrics, maternity and clinical education.
-
-Alongside raising a young family, we are actively involved in surf lifesaving at Rainbow Bay SLSC, which reflects our commitment to community, safety, and education.
-
-We established Coast Resuscitation Group so clinicians could access high-quality ALS training close to home, without the need to travel long distances or attend large, impersonal courses. Our values - professionalism, kindness, respect, and genuine care - guide everything we do, from how we run our workshops to how we support each learner.
-
-Our aim is simple: deliver training that is practical, evidence-based, and personalised, ensuring every participant leaves feeling more capable and confident.
+<div style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 300px;">
+    <p>Coast Resuscitation Group was founded by two Registered Nurses from Northern NSW with experience in critical care, paediatrics, maternity and clinical education.</p>
+    
+    <p>Alongside raising a young family, we are actively involved in surf lifesaving at Rainbow Bay SLSC, which reflects our commitment to community, safety, and education.</p>
+    
+    <p>We established Coast Resuscitation Group so clinicians could access high-quality ALS training close to home, without the need to travel long distances or attend large, impersonal courses. Our values - professionalism, kindness, respect, and genuine care - guide everything we do, from how we run our workshops to how we support each learner.</p>
+    
+    <p>Our aim is simple: deliver training that is practical, evidence-based, and personalised, ensuring every participant leaves feeling more capable and confident.</p>
+  </div>
+  <div style="flex: 0 0 auto; max-width: 400px;">
+    <img src="/img/family.jpg" alt="Coast Resuscitation Group family" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+  </div>
+</div>
