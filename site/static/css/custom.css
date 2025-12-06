@@ -828,8 +828,8 @@ html body .navbar-header .navbar-brand img {
 
 .carousel-widget-container {
   width: 100%;
-  height: 100%;
-  min-height: 700px;
+  max-height: 66.67vh; /* Match carousel image height */
+  height: 66.67vh;
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
@@ -837,6 +837,68 @@ html body .navbar-header .navbar-brand img {
   display: flex;
   align-items: stretch;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Bookeo widget wrapper - makes content scrollable */
+.bookeo-widget-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Make Bookeo widget iframe constrained and scrollable */
+.bookeo-widget-wrapper iframe {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  border: none !important;
+  border-radius: 8px !important;
+  display: block !important;
+}
+
+/* Target any Bookeo-injected content */
+.bookeo-widget-wrapper [id*="bookeo"],
+.bookeo-widget-wrapper [class*="bookeo"],
+.bookeo-widget-wrapper > div {
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* Try to reduce font sizes in Bookeo widget if possible (may not work with iframe) */
+.bookeo-widget-wrapper * {
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+}
+
+.bookeo-widget-wrapper h1,
+.bookeo-widget-wrapper h2,
+.bookeo-widget-wrapper h3,
+.bookeo-widget-wrapper h4 {
+  font-size: 13px !important;
+  margin: 8px 0 !important;
+}
+
+.bookeo-widget-wrapper button,
+.bookeo-widget-wrapper .btn,
+.bookeo-widget-wrapper input,
+.bookeo-widget-wrapper select {
+  font-size: 11px !important;
+  padding: 5px 10px !important;
+  margin: 3px !important;
+}
+
+.bookeo-widget-wrapper table {
+  font-size: 10px !important;
+}
+
+.bookeo-widget-wrapper td,
+.bookeo-widget-wrapper th {
+  padding: 4px !important;
 }
 
 .carousel-widget-container .calendly-inline-widget {
@@ -857,7 +919,8 @@ html body .navbar-header .navbar-brand img {
     padding-bottom: 15px;
   }
   .carousel-widget-container {
-    min-height: 500px;
+    max-height: 50vh;
+    height: 50vh;
   }
   .carousel-image-wrapper {
     min-height: 260px;
