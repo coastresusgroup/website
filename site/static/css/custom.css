@@ -203,29 +203,34 @@ html body #heading-breadcrumbs {
   text-align: left !important;
 }
 
-/* Center Aims and Values heading and increase bullet point font size */
-#content h2#aims-and-values {
-  text-align: center !important;
+/* About page sections - left aligned */
+#content h2 {
+  text-align: left !important;
+  margin-top: 40px !important;
+  margin-bottom: 20px !important;
 }
 
-/* Constrain Aims and Values section to 75% width */
-#content h2#aims-and-values,
-#content h2#aims-and-values ~ p {
-  width: 75% !important;
-  max-width: 75% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+#content h2:first-of-type {
+  margin-top: 20px !important;
 }
 
-/* Target paragraphs that come after the Aims and Values heading */
-#content h2#aims-and-values ~ p {
-  font-size: 18px !important;
-  line-height: 1.6 !important; /* Maintain spacing within each point */
-  text-align: center !important;
-  text-indent: 0 !important;
-  padding-left: 0 !important;
-  margin-bottom: 30px !important; /* Increase spacing between points */
-  margin-top: 0 !important;
+#content p {
+  text-align: left !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  margin-bottom: 15px !important;
+}
+
+#content ul {
+  text-align: left !important;
+  margin-left: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+#content li {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  margin-bottom: 8px !important;
 }
 
 /* Add grey background to team section (full width) */
@@ -810,6 +815,11 @@ html body .navbar-header .navbar-brand img {
   z-index: 2;
   padding: 20px 25px;
   max-width: 70%;
+  text-align: left;
+}
+
+.carousel-text-col > * {
+  text-align: left;
 }
 
 .carousel-image-col {
