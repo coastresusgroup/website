@@ -15,14 +15,6 @@
 
         {{ partial "breadcrumbs.html" . }}
 
-        {{ if eq .RelPermalink "/tncc/" }}
-        <div class="coming-soon-overlay">
-            <div class="coming-soon-content">
-                <h2>Coming Soon...</h2>
-            </div>
-        </div>
-        {{ end }}
-
         <div id="content" class="{{ if eq .RelPermalink "/terms-and-conditions/" }}terms-body{{ end }}">
             {{ if isset .Params "id" }}
 
