@@ -53,6 +53,49 @@ $(document).ready(function() {
   setTimeout(matchCarouselWrapperToButton, 500)
 })
 
+// Update Bookeo widget based on active carousel slide
+function updateBookeoWidget() {
+  const container = document.getElementById('bookeo-widget-container')
+  if (!container) return
+
+  const activeItem = document.querySelector('.homepage .owl-item.active .item')
+  if (!activeItem) return
+
+  const bookeoType = activeItem.getAttribute('data-bookeo-type')
+  if (!bookeoType) return
+
+  // Remove any existing Bookeo scripts
+  const existingScripts = container.querySelectorAll('script[src*="bookeo.com"]')
+  existingScripts.forEach(script => script.remove())
+
+  // Clear existing widget content
+  container.innerHTML = ''
+
+  if (bookeoType === 'coming_soon') {
+    // Show "Coming Soon" message for TNCC
+    container.innerHTML = '<div style="min-width:320px;height:700px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:8px;"><div style="text-align:center;padding:20px;"><h3 style="color:#333;margin-bottom:10px;font-size:24px;">Coming Soon</h3><p style="color:#666;font-size:16px;">Booking for this course will be available soon.</p></div></div>'
+  } else {
+    // Create placeholder while loading
+    const placeholder = document.createElement('div')
+    placeholder.id = 'bookeo-widget-placeholder'
+    placeholder.style.cssText = 'min-width:320px;height:700px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:8px;'
+    placeholder.innerHTML = '<p style="color:#666;font-size:16px;">Loading booking widget...</p>'
+    container.appendChild(placeholder)
+
+    // Load Bookeo widget
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.src = 'https://bookeo.com/widget.js?a=33503UKWPH19AE3851031&type=' + bookeoType
+    script.onload = function() {
+      // Remove placeholder once widget loads
+      if (placeholder.parentNode) {
+        placeholder.remove()
+      }
+    }
+    container.appendChild(script)
+  }
+}
+
 // Ajax contact
 function contactFormAjax () {
   const form = $('.contact-form-ajax')
@@ -236,10 +279,12 @@ function sliders () {
       afterInit: function () {
         // animationsSlider()
         matchCarouselWrapperToButton()
+        updateBookeoWidget()
       },
       afterMove: function () {
         // animationsSlider()
         matchCarouselWrapperToButton()
+        updateBookeoWidget()
       }
     })
   }

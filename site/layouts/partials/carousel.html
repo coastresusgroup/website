@@ -11,33 +11,33 @@
                         data-autoplay="{{ default true .Site.Params.CarouselHomepage.auto_play }}"
                         data-slide-speed="{{ default 2000 .Site.Params.CarouselHomepage.slide_speed }}"
                         data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
-                        {{ range sort .Site.Data.carousel "weight" }}
-                        <div class="item">
+                        {{ range $index, $item := sort .Site.Data.carousel "weight" }}
+                        <div class="item" data-bookeo-type="{{ $item.bookeo_type }}" data-carousel-index="{{ $index }}">
                             <div class="row carousel-item-row">
                                 <div class="col-sm-6 carousel-text-col">
-                                    <h1>{{ .title | safeHTML }}</h1>
-                                    {{ .description | safeHTML }}
-                                    {{ if or .href .logo }}
+                                    <h1>{{ $item.title | safeHTML }}</h1>
+                                    {{ $item.description | safeHTML }}
+                                    {{ if or $item.href $item.logo }}
                                     <div class="carousel-button-logo-wrapper">
-                                        {{ if .href }}
+                                        {{ if $item.href }}
                                         <div class="carousel-button-wrapper">
-                                            <a href="{{ .href }}" class="carousel-learn-more-btn" style="{{ if .button_color }}background-color: {{ .button_color }} !important;{{ end }}color: #ffffff !important;">
+                                            <a href="{{ $item.href }}" class="carousel-learn-more-btn" style="{{ if $item.button_color }}background-color: {{ $item.button_color }} !important;{{ end }}color: #ffffff !important;">
                                                 Learn More
                                             </a>
                                         </div>
                                         {{ end }}
-                                        {{ if .logo }}
+                                        {{ if $item.logo }}
                                         <div class="carousel-logo">
-                                            <img src="{{ .logo | relURL }}" alt="">
+                                            <img src="{{ $item.logo | relURL }}" alt="">
                                         </div>
                                         {{ end }}
                                     </div>
                                     {{ end }}
                                 </div>
                                 <div class="col-sm-6 carousel-image-col">
-                                    {{ if .image }}
+                                    {{ if $item.image }}
                                     <div class="carousel-image-wrapper">
-                                        <img src="{{ .image | relURL }}" alt="{{ .title }}">
+                                        <img src="{{ $item.image | relURL }}" alt="{{ $item.title }}">
                                     </div>
                                     {{ end }}
                                 </div>
@@ -48,8 +48,10 @@
                     <!-- /.project owl-slider -->
                 </div>
                 <div class="col-md-4 col-sm-12 carousel-widget-side">
-                    <div class="carousel-widget-container">
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/coastresusgroup?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                    <div class="carousel-widget-container" id="bookeo-widget-container">
+                        <div id="bookeo-widget-placeholder" style="min-width:320px;height:700px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:8px;">
+                            <p style="color:#666;font-size:16px;">Loading booking widget...</p>
+                        </div>
                     </div>
                 </div>
             </div>
