@@ -724,18 +724,27 @@ html body .navbar-header .navbar-brand img {
   border-radius: 8px;
   margin-top: 20px;
   display: inline-flex;
+  flex-direction: column;
   float: none;
   clear: none;
   text-align: left;
   padding: 0;
   box-sizing: border-box;
-  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
 .home-carousel .carousel-button-wrapper {
   margin: 0;
   padding: 0;
-  text-align: right;
+  width: 100%;
+  text-align: center;
+}
+
+.home-carousel .carousel-button-wrapper .carousel-learn-more-btn {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  margin: 0;
 }
 
 .home-carousel .carousel-logo {
@@ -840,19 +849,20 @@ html body .navbar-header .navbar-brand img {
 /* Left-justify button and logo */
 .carousel-button-logo-wrapper {
   display: flex;
-  align-items: center;
-  gap: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
   justify-content: flex-start;
   margin-top: 20px;
   width: auto;
 }
 
 .carousel-button-wrapper {
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .carousel-logo {
-  flex-shrink: 0;
+  width: 100%;
 }
 
 /* Ensure carousel images stay within left 50% of page */
