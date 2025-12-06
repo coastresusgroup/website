@@ -204,32 +204,40 @@ html body #heading-breadcrumbs {
 }
 
 /* About page sections - left aligned */
-body.page-about #content h2,
-body.page-about #content h2#why-choose-us,
-body.page-about #content h2#about-us {
+#content h2 {
   text-align: left !important;
   margin-top: 40px !important;
   margin-bottom: 20px !important;
 }
 
-body.page-about #content h2:first-of-type {
+#content h2:first-of-type {
   margin-top: 20px !important;
 }
 
-body.page-about #content p {
+/* About page paragraphs - ensure proper display */
+#content p {
   text-align: left !important;
   font-size: 16px !important;
   line-height: 1.7 !important;
   margin-bottom: 15px !important;
+  display: block !important;
 }
 
-body.page-about #content ul {
+#content div p {
+  text-align: left !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  margin-bottom: 15px !important;
+  display: block !important;
+}
+
+#content ul {
   text-align: left !important;
   margin-left: 20px !important;
   margin-bottom: 20px !important;
 }
 
-body.page-about #content li {
+#content li {
   font-size: 16px !important;
   line-height: 1.7 !important;
   margin-bottom: 8px !important;
