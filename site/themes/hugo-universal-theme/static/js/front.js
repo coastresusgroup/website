@@ -28,22 +28,146 @@ $(function () {
 $(window).on('load', function() {
   initCollegeLogosCarousel()
   matchCarouselWrapperToButton()
+  scaleCourseTitleToFit()
+  balanceCourseDescriptionHeights()
 })
 
 $(window).on('load', function () {
   contactFormEmailJS()
 })
 
-// Match carousel button-logo wrapper width to button width
+// Set carousel button-logo wrapper width to 50% of carousel component width
 function matchCarouselWrapperToButton() {
   $('.carousel-button-logo-wrapper').each(function() {
     const $wrapper = $(this)
-    const $button = $wrapper.find('.carousel-learn-more-btn')
-    if ($button.length) {
-      const buttonWidth = $button[0].offsetWidth
-      if (buttonWidth > 0) {
-        $wrapper[0].style.setProperty('width', buttonWidth + 'px', 'important')
+    const $carouselItemContent = $wrapper.closest('.carousel-item-content')
+    if ($carouselItemContent.length) {
+      const carouselWidth = $carouselItemContent[0].offsetWidth
+      const targetWidth = carouselWidth * 0.5 // 50% of carousel component
+      if (targetWidth > 0) {
+        $wrapper[0].style.setProperty('width', targetWidth + 'px', 'important')
+        $wrapper[0].style.setProperty('max-width', targetWidth + 'px', 'important')
       }
+    }
+  })
+}
+
+// Scale course title to fit on one line
+function scaleCourseTitleToFit() {
+  $('.course-hero-content h1').each(function() {
+    const $title = $(this)
+    const $hero = $title.closest('.course-hero')
+    if (!$hero.length) return
+    
+    const heroWidth = $hero[0].offsetWidth - 40 // Account for padding
+    let fontSize = parseFloat($title.css('font-size'))
+    const minFontSize = 18
+    const maxFontSize = 36
+    
+    // Reset to max size first
+    $title.css('font-size', maxFontSize + 'px')
+    
+    // Reduce font size until it fits on one line
+    while (fontSize > minFontSize) {
+      $title.css('font-size', fontSize + 'px')
+      const titleWidth = $title[0].scrollWidth
+      const titleHeight = $title[0].offsetHeight
+      const lineHeight = parseFloat($title.css('line-height'))
+      const lines = Math.ceil(titleHeight / lineHeight)
+      
+      if (titleWidth <= heroWidth && lines <= 1) {
+        break
+      }
+      
+      fontSize -= 1
+    }
+    
+    // Ensure minimum font size
+    if (fontSize < minFontSize) {
+      fontSize = minFontSize
+      $title.css('font-size', fontSize + 'px')
+    }
+  })
+}
+
+// Balance course description and who should attend heights
+function balanceCourseDescriptionHeights() {
+  $('.course-description-grid').each(function() {
+    const $grid = $(this)
+    const $main = $grid.find('.course-description-main')
+    const $sidebar = $grid.find('.course-description-sidebar')
+    const $attendeesList = $sidebar.find('.attendees-list')
+    
+    if (!$main.length || !$sidebar.length || !$attendeesList.length) return
+    
+    const $items = $attendeesList.find('.attendee-item')
+    if (!$items.length) return
+    
+    // Get baseline item height (from single column to establish reasonable height)
+    $attendeesList[0].style.setProperty('grid-template-columns', '1fr', 'important')
+    void $attendeesList[0].offsetHeight // Force reflow
+    const baselineItemHeight = $items[0].offsetHeight
+    const maxItemHeight = baselineItemHeight * 1.3 // Max 30% taller than baseline
+    
+    // Try different flex ratios and column counts to balance heights
+    const ratios = [
+      { main: 2, sidebar: 3 }, // 2/5, 3/5
+      { main: 1, sidebar: 2 }, // 1/3, 2/3
+      { main: 3, sidebar: 4 }, // 3/7, 4/7
+      { main: 1, sidebar: 1 }, // 1/2, 1/2
+      { main: 3, sidebar: 5 }, // 3/8, 5/8
+      { main: 4, sidebar: 5 }, // 4/9, 5/9
+    ]
+    
+    const tolerance = 50 // pixels tolerance for "equal" heights
+    let bestConfig = null
+    let bestScore = Infinity
+    
+    // Try each ratio with different column counts
+    ratios.forEach(ratio => {
+      for (let cols = 1; cols <= 3; cols++) {
+        // Apply ratio and columns temporarily
+        $main[0].style.setProperty('flex', ratio.main, 'important')
+        $sidebar[0].style.setProperty('flex', ratio.sidebar, 'important')
+        $attendeesList[0].style.setProperty('grid-template-columns', `repeat(${cols}, 1fr)`, 'important')
+        
+        // Force reflow
+        void $main[0].offsetHeight
+        
+        // Measure heights
+        const mainHeight = $main[0].offsetHeight
+        const sidebarHeight = $sidebar[0].offsetHeight
+        const heightDiff = Math.abs(mainHeight - sidebarHeight)
+        
+        // Check item height
+        const currentItemHeight = $items[0].offsetHeight
+        const itemHeightOK = currentItemHeight <= maxItemHeight
+        
+        // Calculate score: prioritize balanced heights, then reasonable item heights
+        // Lower score is better
+        const heightScore = heightDiff
+        const itemHeightPenalty = itemHeightOK ? 0 : 1000 // Large penalty if items too tall
+        const score = heightScore + itemHeightPenalty
+        
+        // Check if this is better
+        if (score < bestScore) {
+          bestScore = score
+          bestConfig = { ratio, cols, heightDiff, itemHeight: currentItemHeight }
+        }
+        
+        // If we found a perfect match, stop early
+        if (heightDiff <= tolerance && itemHeightOK) {
+          bestConfig = { ratio, cols, heightDiff, itemHeight: currentItemHeight }
+          return false // Break out of forEach
+        }
+      }
+    })
+    
+    // Apply best found configuration
+    if (bestConfig) {
+      $main[0].style.setProperty('flex', bestConfig.ratio.main, 'important')
+      $sidebar[0].style.setProperty('flex', bestConfig.ratio.sidebar, 'important')
+      $attendeesList[0].style.setProperty('grid-template-columns', `repeat(${bestConfig.cols}, 1fr)`, 'important')
     }
   })
 }
@@ -51,6 +175,13 @@ function matchCarouselWrapperToButton() {
 // Also call after carousel is initialized
 $(document).ready(function() {
   setTimeout(matchCarouselWrapperToButton, 500)
+  setTimeout(scaleCourseTitleToFit, 500)
+  setTimeout(balanceCourseDescriptionHeights, 500)
+})
+
+// Rebalance on window resize
+$(window).on('resize', function() {
+  setTimeout(balanceCourseDescriptionHeights, 100)
 })
 
 
@@ -237,10 +368,12 @@ function sliders () {
       afterInit: function () {
         // animationsSlider()
         matchCarouselWrapperToButton()
+        scaleCourseTitleToFit()
       },
       afterMove: function () {
         // animationsSlider()
         matchCarouselWrapperToButton()
+        scaleCourseTitleToFit()
       }
     })
   }
@@ -529,6 +662,7 @@ $(window).resize(function () {
       fullScreenContainer()
       pictureZoom()
       matchCarouselWrapperToButton()
+      scaleCourseTitleToFit()
     }, 205)
     windowWidth = newWindowWidth
   }
