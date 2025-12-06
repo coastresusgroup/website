@@ -723,7 +723,7 @@ html body .navbar-header .navbar-brand img {
   background: #ffffff;
   border-radius: 8px;
   margin-top: 20px;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   float: none;
   clear: none;
@@ -732,6 +732,9 @@ html body .navbar-header .navbar-brand img {
   box-sizing: border-box;
   align-items: flex-start;
   overflow: hidden;
+  width: auto;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .home-carousel .carousel-button-wrapper {
