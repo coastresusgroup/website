@@ -13,8 +13,15 @@
                         data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
                         {{ range $index, $item := sort .Site.Data.carousel "weight" }}
                         <div class="item" data-carousel-index="{{ $index }}">
-                            <div class="row carousel-item-row">
-                                <div class="col-xs-12 carousel-text-col">
+                            <div class="carousel-item-content">
+                                {{ if $item.image }}
+                                <div class="carousel-image-col">
+                                    <div class="carousel-image-wrapper">
+                                        <img src="{{ $item.image | relURL }}" alt="{{ $item.title }}">
+                                    </div>
+                                </div>
+                                {{ end }}
+                                <div class="carousel-text-col">
                                     <h1>{{ $item.title | safeHTML }}</h1>
                                     {{ $item.description | safeHTML }}
                                     {{ if or $item.href $item.logo }}
@@ -31,13 +38,6 @@
                                             <img src="{{ $item.logo | relURL }}" alt="">
                                         </div>
                                         {{ end }}
-                                    </div>
-                                    {{ end }}
-                                </div>
-                                <div class="col-xs-12 carousel-image-col">
-                                    {{ if $item.image }}
-                                    <div class="carousel-image-wrapper">
-                                        <img src="{{ $item.image | relURL }}" alt="{{ $item.title }}">
                                     </div>
                                     {{ end }}
                                 </div>
