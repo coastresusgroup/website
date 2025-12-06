@@ -53,50 +53,24 @@ $(document).ready(function() {
   setTimeout(matchCarouselWrapperToButton, 500)
 })
 
-// Update Bookeo widget based on active carousel slide
-function updateBookeoWidget() {
-  const container = document.getElementById('bookeo-widget-container')
-  if (!container) return
-
+// Show the correct Bookeo widget based on active carousel slide
+function showBookeoWidget() {
   const activeItem = document.querySelector('.homepage .owl-item.active .item')
   if (!activeItem) return
 
-  const bookeoType = activeItem.getAttribute('data-bookeo-type')
-  if (!bookeoType) return
+  const activeIndex = activeItem.getAttribute('data-carousel-index')
+  if (activeIndex === null) return
 
-  // Clear existing widget content and scripts
-  container.innerHTML = ''
-  
-  // Remove any existing Bookeo scripts from head
-  const existingScripts = document.head.querySelectorAll('script[src*="bookeo.com"]')
-  existingScripts.forEach(script => script.remove())
+  // Hide all widget items
+  const widgetItems = document.querySelectorAll('.bookeo-widget-item')
+  widgetItems.forEach(function(item) {
+    item.style.display = 'none'
+  })
 
-  if (bookeoType === 'coming_soon') {
-    // Show "Coming Soon" message for TNCC
-    container.innerHTML = '<div style="min-width:320px;height:700px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:8px;"><div style="text-align:center;padding:20px;"><h3 style="color:#333;margin-bottom:10px;font-size:24px;">Coming Soon</h3><p style="color:#666;font-size:16px;">Booking for this course will be available soon.</p></div></div>'
-  } else {
-    // Create placeholder
-    container.innerHTML = '<div id="bookeo-widget-placeholder" style="min-width:320px;height:700px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:8px;"><p style="color:#666;font-size:16px;">Loading booking widget...</p></div>'
-
-    // Load Bookeo widget script - append to head so it executes
-    const script = document.createElement('script')
-    script.type = 'text/javascript'
-    script.src = 'https://bookeo.com/widget.js?a=33503UKWPH19AE3851031&type=' + bookeoType
-    script.async = true
-    script.onload = function() {
-      // Widget should load automatically, remove placeholder after a delay
-      setTimeout(function() {
-        const placeholder = document.getElementById('bookeo-widget-placeholder')
-        if (placeholder && placeholder.parentNode) {
-          // Check if widget content has been injected
-          const hasWidget = container.querySelector('iframe, [id*="bookeo"], [class*="bookeo"]')
-          if (hasWidget) {
-            placeholder.remove()
-          }
-        }
-      }, 1500)
-    }
-    document.head.appendChild(script)
+  // Show the widget matching the active carousel item
+  const targetWidget = document.querySelector('.bookeo-widget-item[data-carousel-index="' + activeIndex + '"]')
+  if (targetWidget) {
+    targetWidget.style.display = 'block'
   }
 }
 
@@ -283,12 +257,12 @@ function sliders () {
       afterInit: function () {
         // animationsSlider()
         matchCarouselWrapperToButton()
-        updateBookeoWidget()
+        showBookeoWidget()
       },
       afterMove: function () {
         // animationsSlider()
         matchCarouselWrapperToButton()
-        updateBookeoWidget()
+        showBookeoWidget()
       }
     })
   }
