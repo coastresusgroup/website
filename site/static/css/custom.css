@@ -60,6 +60,11 @@ html body #heading-breadcrumbs {
   margin-bottom: 40px;
 }
 
+/* Store original background for blur effect */
+#heading-breadcrumbs {
+  background-attachment: scroll;
+}
+
 #heading-breadcrumbs .container {
   position: relative;
 }
@@ -121,6 +126,34 @@ html body #heading-breadcrumbs {
   
   .heading-breadcrumbs-image::after {
     display: none;
+  }
+  
+  /* Remove blur from banner images on mobile - only homepage carousel should have blur */
+  #heading-breadcrumbs {
+    position: relative;
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+  
+  #heading-breadcrumbs .container {
+    filter: none !important;
+    -webkit-filter: none !important;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #heading-breadcrumbs .heading-breadcrumbs-content,
+  #heading-breadcrumbs h1,
+  #heading-breadcrumbs .heading-breadcrumbs-image {
+    filter: none !important;
+    -webkit-filter: none !important;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .heading-breadcrumbs-image img {
+    filter: none !important;
+    -webkit-filter: none !important;
   }
 }
 
@@ -314,7 +347,7 @@ section.bar.no-mb .testimonials .item .testimonial .text > p {
 /* Constrain the container inside to 75% width */
 .bar.no-mb .container {
   width: 75% !important;
-  max-width: 75% !important;
+    max-width: 70% !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: 15px !important;
@@ -660,6 +693,18 @@ blockquote {
   position: absolute !important;
 }
 
+/* Override absolute positioning on mobile - use static to push down items */
+@media (max-width: 768px) {
+  .navbar-collapse .navbar-nav > li.dropdown .dropdown-menu,
+  .navbar-collapse .dropdown-menu {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+}
+
 .navbar .dropdown {
   position: relative !important;
   z-index: 999998 !important; /* Very high to ensure clicks work */
@@ -739,6 +784,38 @@ html body .navbar-header .navbar-brand img {
 /* Remove blue overlay from carousel background */
 .home-carousel .dark-mask {
   display: none !important;
+}
+
+/* Ensure carousel sections have lower z-index than navbar on mobile */
+@media (max-width: 768px) {
+  /* Ensure header/navbar is above everything */
+  header,
+  header.navbar-affixed-top,
+  header > .navbar,
+  .navbar-affixed-top {
+    position: relative !important;
+    z-index: 99999 !important;
+  }
+  
+  /* Ensure navbar elements are above carousel */
+  .navbar,
+  .navbar-default,
+  .navbar .container,
+  .navbar-header,
+  .navbar-brand,
+  .navbar-brand img {
+    position: relative !important;
+    z-index: 99999 !important;
+  }
+  
+  /* Keep carousel sections below navbar */
+  section.bar,
+  .home-carousel,
+  .home-carousel .container,
+  section {
+    position: relative !important;
+    z-index: 1 !important;
+  }
 }
 
 /* Alternative: Make overlay transparent instead of hiding it */
@@ -1071,6 +1148,74 @@ html body .navbar-header .navbar-brand img {
   }
 }
 
+/* Hide carousel on small screens (phones and small tablets) */
+/* Show booking widget full width instead */
+@media (max-width: 768px) {
+  /* Hide the carousel column completely - use very specific selectors */
+  section .home-carousel .home-carousel-layout > div.col-md-6:first-child,
+  section .home-carousel .home-carousel-layout > div.col-sm-12:first-child,
+  .home-carousel .home-carousel-layout > .col-md-6:first-child,
+  .home-carousel .home-carousel-layout > .col-sm-12:first-child {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Hide carousel elements directly */
+  .home-carousel .homepage.owl-carousel,
+  .home-carousel .owl-carousel,
+  .home-carousel .owl-stage-outer,
+  .home-carousel .owl-stage {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Make booking widget full width - override Bootstrap classes */
+  .home-carousel .carousel-widget-side.col-md-6,
+  .home-carousel .carousel-widget-side.col-sm-12,
+  section .home-carousel .carousel-widget-side {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  /* Adjust widget container for full width and center it */
+  .home-carousel .carousel-widget-container {
+    max-height: 70vh !important;
+    height: 70vh !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Ensure the row doesn't create extra space and center content */
+  .home-carousel .home-carousel-layout {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  /* Adjust container padding for mobile and center */
+  .home-carousel .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
 /* Move carousel navigation elements up to be visible under carousel images */
 .home-carousel .owl-theme .owl-controls {
   position: absolute !important;
@@ -1105,10 +1250,19 @@ html body .navbar-header .navbar-brand img {
   min-height: 120px !important;
 }
 
-.navbar-brand {
-  height: 120px !important;
-  min-height: 120px !important;
+/* Override min-height on mobile */
+@media (max-width: 768px) {
+  .navbar-header,
+  .navbar-affixed-top,
+  .affix,
+  header.navbar-affixed-top,
+  header {
+    height: auto !important;
+    min-height: 0 !important;
+  }
 }
+
+/* Override navbar height on mobile - moved to main mobile query */
 
 /* Position navbar buttons at the bottom of the navbar */
 .navbar-nav {
@@ -1118,6 +1272,22 @@ html body .navbar-header .navbar-brand img {
   height: auto !important; /* Let buttons determine their own height */
   margin: 0 !important;
   z-index: 10001 !important; /* Ensure nav items are above navbar */
+}
+
+/* Override navbar-nav positioning on mobile - make it relative so it flows below button */
+@media (max-width: 768px) {
+  .navbar-collapse .navbar-nav,
+  .navbar-nav {
+    position: relative !important;
+    bottom: auto !important;
+    right: 0 !important;
+    left: auto !important;
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    margin-left: auto !important;
+    text-align: right !important;
+  }
 }
 
 .navbar-nav > li > a {
@@ -1196,19 +1366,394 @@ section.bar.background-image-fixed-2 .btn-template-transparent-black:active {
 }
 
 /* Mobile responsive adjustments for logo */
-@media (max-width: 768px) {
-  .navbar-brand img {
-    max-height: 180px !important; /* 1.5x the 120px */
-    height: 180px !important;
-    top: -5px !important; /* Half the padding */
+/* Use both max-width and screen to ensure it applies */
+@media screen and (max-width: 768px) {
+  /* Prevent horizontal scroll on mobile */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
   }
   
+  #all {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+  }
+  
+  /* Remove padding from header wrapper and body - use -15px negative margin */
+  header.navbar-affixed-top,
+  header {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    position: relative !important;
+    z-index: 99999 !important;
+  }
+  
+  body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  #all {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Remove any banner padding */
+  banner {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Target the navbar wrapper directly - use -15px negative margin */
+  header > .navbar,
+  header.navbar-affixed-top > .navbar,
+  .navbar-affixed-top .navbar {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  /* Remove navbar container padding - use -15px negative margin */
+  header .navbar .container,
+  .navbar .container {
+    margin-top: -15px !important;
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .navbar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Remove ALL top padding/margin from navbar to push logo to top */
+  header.navbar-affixed-top,
+  .navbar,
+  .navbar-default,
+  .navbar-affixed-top,
+  .affix {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    border-top: none !important;
+    position: relative !important;
+    z-index: 10000 !important;
+  }
+  
+  /* Ensure navbar container also has high z-index */
+  .navbar .container {
+    position: relative !important;
+    z-index: 10001 !important;
+  }
+  
+  /* Override navbar-brand height on mobile */
+  .navbar-brand {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 150px !important;
+    z-index: 10002 !important;
+    position: relative !important;
+  }
+  
+  /* Remove Bootstrap default navbar padding and borders */
+  .navbar-default {
+    border: none !important;
+  }
+  
+  /* Remove ALL padding from navbar container */
+  .navbar .container,
+  .navbar .container-fluid {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Reduce navbar padding on mobile */
+  .navbar,
+  .navbar-default {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Navbar header with logo on left, button on right - scaled for mobile */
+  .navbar-header {
+    width: 100% !important;
+    text-align: left !important;
+    float: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    line-height: 0 !important;
+    z-index: 10001 !important;
+  }
+  
+  /* Override any min-height from desktop rules */
+  .navbar-header,
+  .navbar .container,
+  .navbar,
+  .navbar-default,
+  header.navbar-affixed-top,
+  header {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  
+  /* Navbar brand/logo - left aligned, scaled down on mobile */
+  .navbar-brand {
+    float: none !important;
+    display: block !important;
+    margin: 0 !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    width: auto !important;
+    max-width: 80% !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 150px !important;
+    order: 1 !important; /* Logo comes first in flexbox */
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 0 !important;
+    flex: 0 1 auto !important;
+    flex-shrink: 1 !important;
+    z-index: 10002 !important;
+  }
+  
+  /* Override desktop 200px height rules on mobile - bigger logo */
+  .navbar-brand img,
+  .navbar .navbar-brand img,
+  .navbar-default .navbar-brand img,
+  .navbar-header .navbar-brand img,
+  body .navbar .navbar-brand img,
+  html body .navbar .navbar-brand img,
+  body .navbar-default .navbar-brand img,
+  html body .navbar-default .navbar-brand img,
+  body .navbar-header .navbar-brand img,
+  html body .navbar-header .navbar-brand img,
+  .navbar-brand img[src*="logo.png"],
+  .navbar-brand img[src*="logo-small.png"],
+  img[src="/img/logo.png"],
+  img[src="/img/logo-small.png"] {
+    max-height: 150px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-width: 80% !important;
+    width: auto !important;
+    margin: 0 !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    vertical-align: top !important;
+    line-height: 0 !important;
+    object-fit: contain !important;
+    position: relative !important;
+    z-index: 10003 !important;
+  }
+  
+  /* Remove any pseudo-element spacing - make it invisible or remove it */
   .navbar-brand::before {
-    width: 440px !important; /* 2x wider for mobile (220px * 2) */
-    height: 88px !important; /* 0.4x height for mobile (220px * 0.4) */
-    top: -5px !important; /* Match logo positioning */
-    background: radial-gradient(ellipse 440px 88px at 0 0, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.15) 70%, rgba(255, 255, 255, 0.05) 85%, transparent 100%) !important;
-    border-radius: 0 0 100% 0 !important; /* Quarter circle for mobile */
+    display: none !important; /* Hide the pseudo-element on mobile */
+  }
+  
+  .navbar-brand::after {
+    margin: 0 !important;
+    padding: 0 !important;
+    top: 0 !important;
+    display: none !important;
+  }
+  
+  .navbar-brand img {
+    max-height: 150px !important;
+    height: auto !important;
+    max-width: 80% !important;
+    width: auto !important;
+    top: 0 !important;
+    margin: 0 !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    display: block !important;
+    transform: none !important; /* Override desktop transform */
+    transform-origin: left center !important;
+    position: relative !important;
+    object-fit: contain !important;
+  }
+  
+  /* Hide the ::before pseudo-element on mobile to remove spacing */
+  .navbar-brand::before {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    content: none !important;
+  }
+  
+  /* Navbar buttons container - right aligned, always visible */
+  .navbar-buttons {
+    float: none !important;
+    display: block !important;
+    margin: 0 !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: right !important;
+    position: relative !important;
+    width: auto !important;
+    order: 2 !important; /* Ensure it comes after logo in flexbox */
+    clear: none !important;
+    padding: 0 !important;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Navbar toggle button - right aligned, always visible */
+  .navbar-toggle {
+    float: none !important;
+    margin: 0 !important;
+    display: block !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    padding: 12px 16px !important;
+    border: 2px solid var(--primary-blue) !important;
+    border-radius: 4px !important;
+    background-color: var(--primary-white) !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    clear: none !important;
+  }
+  
+  /* Minimal gap between logo and button */
+  .navbar-header {
+    gap: 10px !important;
+    row-gap: 0 !important;
+  }
+  
+  /* Remove ALL bottom margin and padding from navbar brand and buttons */
+  .navbar-brand,
+  .navbar-buttons,
+  .navbar-toggle {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Ensure logo image has no bottom spacing and tight fit */
+  .navbar-brand img {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    vertical-align: top !important;
+    display: block !important;
+    line-height: 0 !important;
+  }
+  
+  /* Remove any line-height that creates space */
+  .navbar-brand {
+    line-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* Ensure logo image has no bottom spacing */
+  .navbar-brand img {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    display: block !important;
+  }
+  
+  .navbar-toggle i {
+    font-size: 24px !important;
+    color: var(--primary-blue) !important;
+  }
+  
+  /* Position collapsed menu below the toggle button - right aligned */
+  .navbar-collapse {
+    text-align: right !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: none !important; /* Allow full expansion, no scrolling */
+    height: auto !important; /* Auto height to accommodate all content */
+    overflow: visible !important; /* No overflow restrictions */
+    overflow-y: visible !important; /* No vertical scrolling */
+    overflow-x: visible !important; /* No horizontal scrolling */
+    box-sizing: border-box !important;
+    position: relative !important;
+    float: none !important;
+    left: auto !important;
+    right: 0 !important;
+    top: auto !important;
+    margin: 0 !important;
+    margin-left: auto !important;
+    clear: both !important;
+  }
+  
+  /* Ensure nav items are right aligned and stacked */
+  .navbar-collapse .navbar-nav {
+    position: relative !important;
+    float: none !important;
+    left: auto !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    margin-left: auto !important;
+    text-align: right !important;
+  }
+  
+  .navbar-collapse .navbar-nav > li {
+    float: none !important;
+    display: block !important;
+    text-align: right !important;
+  }
+  
+  .navbar-collapse .navbar-nav > li > a {
+    text-align: right !important;
+    display: block !important;
+    padding-right: 20px !important;
   }
   
   .navbar-default .navbar-nav > li > a {
@@ -1219,6 +1764,123 @@ section.bar.background-image-fixed-2 .btn-template-transparent-black:active {
     background-color: var(--accent-cyan) !important;
     color: var(--primary-black) !important;
   }
+  
+  /* Right align dropdown menus on mobile - use static positioning to push down items */
+  .navbar-collapse .navbar-nav > li.dropdown {
+    position: static !important;
+    float: none !important;
+    display: block !important;
+  }
+  
+  .navbar-collapse .navbar-nav > li.dropdown > .dropdown-menu,
+  .navbar-collapse .dropdown-menu {
+    text-align: right !important;
+    right: auto !important;
+    left: auto !important;
+    float: none !important;
+    position: static !important;
+    display: none !important; /* Hidden by default */
+    width: 100% !important;
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: transparent !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+  
+  /* Show dropdown when parent is open/active - pushes down items below */
+  .navbar-collapse .navbar-nav > li.dropdown.open > .dropdown-menu,
+  .navbar-collapse .navbar-nav > li.dropdown.active > .dropdown-menu,
+  .navbar-collapse .navbar-nav > li.dropdown.show > .dropdown-menu {
+    display: block !important;
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .navbar-collapse .navbar-nav > li.dropdown > a.dropdown-toggle {
+    text-align: right !important;
+    padding-right: 20px !important;
+  }
+  
+  .navbar-collapse .dropdown-menu > li {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+    position: static !important;
+    float: none !important;
+  }
+  
+  .navbar-collapse .dropdown-menu > li > a {
+    text-align: right !important;
+    padding-right: 30px !important;
+    padding-left: 15px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    display: block !important;
+    width: 100% !important;
+    position: static !important;
+  }
+  
+  /* Ensure all menu items are in normal flow */
+  .navbar-collapse .navbar-nav > li {
+    margin-bottom: 0 !important;
+    display: block !important;
+    position: static !important;
+    float: none !important;
+    clear: both !important;
+  }
+  
+  /* Ensure dropdown doesn't use absolute positioning - override desktop rules */
+  .navbar-collapse .navbar-nav > li.dropdown.open,
+  .navbar-collapse .navbar-nav > li.dropdown.active,
+  .navbar-collapse .navbar-nav > li.dropdown.show {
+    position: static !important;
+    float: none !important;
+  }
+  
+  /* Override any Bootstrap absolute positioning */
+  .navbar-collapse .navbar-nav > li.dropdown.open .dropdown-menu,
+  .navbar-collapse .navbar-nav > li.dropdown.active .dropdown-menu,
+  .navbar-collapse .navbar-nav > li.dropdown.show .dropdown-menu {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+  
+  /* Ensure all sections don't overflow */
+  section, .container, .row {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Override any desktop transforms on navbar elements */
+  .navbar-header * {
+    transform: none !important;
+  }
+  
+  .navbar-brand,
+  .navbar-brand *,
+  .navbar-buttons,
+  .navbar-toggle {
+    transform: none !important;
+  }
+  
+  /* Ensure navbar header height adjusts to content */
+  .navbar-header {
+    min-height: auto !important;
+    height: auto !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1228,12 +1890,12 @@ section.bar.background-image-fixed-2 .btn-template-transparent-black:active {
     top: -5px !important; /* Half the padding */
   }
   
+  /* Hide the ::before pseudo-element on smaller mobile too */
   .navbar-brand::before {
-    width: 360px !important; /* 2x wider for mobile (180px * 2) */
-    height: 72px !important; /* 0.4x height for mobile (180px * 0.4) */
-    top: -5px !important; /* Match logo positioning */
-    background: radial-gradient(ellipse 360px 72px at 0 0, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.15) 70%, rgba(255, 255, 255, 0.05) 85%, transparent 100%) !important;
-    border-radius: 0 0 100% 0 !important; /* Quarter circle for mobile */
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    content: none !important;
   }
 }
 
@@ -1864,16 +2526,67 @@ section.bar.background-image-fixed-2 .btn-template-transparent-black:active {
 }
 
 
-/* Center the last two features on the second row */
-.bar.background-white .row.row-1 {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+/* Center the last two features on the second row (desktop only) */
+@media (min-width: 769px) {
+  .bar.background-white .row.row-1 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  /* Keep Bootstrap column widths but center them */
+  .bar.background-white .row.row-1 > div.col-md-4 {
+    flex-shrink: 0;
+  }
 }
 
-/* Keep Bootstrap column widths but center them */
-.bar.background-white .row.row-1 > div.col-md-4 {
-  flex-shrink: 0;
+/* On mobile, make second row display same as first row and center content */
+@media (max-width: 768px) {
+  /* Center features section content */
+  .features-bar .container {
+    text-align: center !important;
+  }
+  
+  .features-bar .row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .features-bar .row > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  
+  .features-bar .box-simple {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .features-bar .box-simple .icon {
+    margin: 0 auto !important;
+  }
+  
+  .bar.background-white .row.row-1 {
+    display: block !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  
+  .bar.background-white .row.row-1 > div.col-md-4 {
+    flex-shrink: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    text-align: center !important;
+  }
 }
 
 /* College Logos Carousel */
@@ -1883,6 +2596,47 @@ section.bar.background-image-fixed-2 .btn-template-transparent-black:active {
   padding: 20px 0;
   overflow: visible;
   min-height: 150px;
+}
+
+/* On mobile, ensure the section is visible */
+@media (max-width: 768px) {
+  section.bar.background-pentagon,
+  .bar.background-pentagon {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+  
+  .bar.background-pentagon .container {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .bar.background-pentagon .row {
+    display: block !important;
+    visibility: visible !important;
+    margin: 0 !important;
+  }
+  
+  .bar.background-pentagon .col-md-12 {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px !important;
+  }
+  
+  .bar.background-pentagon .heading {
+    display: block !important;
+    visibility: visible !important;
+    margin: 20px 0 !important;
+  }
 }
 
 .college-logos-fade-left,
@@ -1946,6 +2700,75 @@ section.bar.background-image-fixed-2 .btn-template-transparent-black:active {
   z-index: 1;
 }
 
+/* On mobile, show logos as simple static list - no carousel */
+@media (max-width: 768px) {
+  /* Remove owl-carousel class on mobile via CSS */
+  .college-logos-carousel.mobile-static-list,
+  .college-logos-carousel {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    list-style: none !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+    width: 100% !important;
+  }
+  
+  /* Hide owl wrappers completely */
+  .college-logos-carousel .owl-stage-outer,
+  .college-logos-carousel .owl-stage {
+    display: none !important;
+  }
+  
+  /* Make owl-items transparent */
+  .college-logos-carousel .owl-item {
+    display: contents !important;
+  }
+  
+  /* Show ALL list items directly */
+  .college-logos-carousel li.item,
+  .college-logos-carousel > li.item,
+  .college-logos-carousel > li,
+  .college-logos-carousel li {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    width: 100% !important;
+    float: none !important;
+    margin: 20px 0 !important;
+    padding: 15px !important;
+    height: auto !important;
+    min-height: 100px !important;
+    list-style: none !important;
+  }
+  
+  /* Show logo containers and images */
+  .college-logos-carousel .college-logo-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 15px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .college-logos-carousel .college-logo-item img {
+    max-height: 120px !important;
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 auto !important;
+  }
+}
+
 .college-logos-carousel .item {
   padding: 0 15px;
   display: flex;
@@ -1994,13 +2817,121 @@ section.bar.background-image-fixed-2 .btn-template-transparent-black:active {
   }
 }
 
-@media (max-width: 767px) {
-  .college-logos-carousel .item {
-    height: 80px;
+@media (max-width: 768px) {
+  /* Ensure section is visible */
+  section.bar.background-pentagon,
+  .bar.background-pentagon {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 200px !important;
+    padding: 40px 0 !important;
   }
   
-  .college-logo-item img {
-    max-height: 60px;
+  .college-logos-carousel-wrapper {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 200px !important;
+    padding: 20px 0 !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+  
+  /* Hide fade overlays */
+  .college-logos-fade-left,
+  .college-logos-fade-right {
+    display: none !important;
+  }
+  
+  /* Simple: make the list display as blocks */
+  .college-logos-carousel {
+    display: block !important;
+    list-style: none !important;
+    padding: 0 15px !important;
+    margin: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Reset all positioning and transforms */
+  .college-logos-carousel {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Make owl-carousel wrappers transparent so list items show through */
+  .college-logos-carousel .owl-stage-outer {
+    display: block !important;
+    overflow: visible !important;
+    width: 100% !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+  }
+  
+  .college-logos-carousel .owl-stage {
+    display: block !important;
+    width: 100% !important;
+    transform: none !important;
+    position: relative !important;
+    left: 0 !important;
+  }
+  
+  .college-logos-carousel .owl-item {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    position: relative !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+  
+  /* Show all list items as simple blocks - whether direct children or inside owl-item */
+  .college-logos-carousel > li,
+  .college-logos-carousel .owl-item > li,
+  .college-logos-carousel li.item,
+  .college-logos-carousel .owl-item li.item {
+    display: block !important;
+    margin: 20px 0 !important;
+    padding: 15px !important;
+    list-style: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    float: none !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+  }
+  
+  /* Show images */
+  .college-logos-carousel .college-logo-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .college-logos-carousel .college-logo-item img {
+    max-height: 120px !important;
+    max-width: 100% !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
 

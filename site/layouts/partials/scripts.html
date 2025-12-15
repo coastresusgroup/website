@@ -24,7 +24,22 @@
 <script>
 // Initialize college logos carousel after owlCarousel loads
 (function() {
+  // Wait for jQuery to be available
+  function waitForJQuery(callback) {
+    if (typeof jQuery !== 'undefined') {
+      callback();
+    } else {
+      setTimeout(function() { waitForJQuery(callback); }, 50);
+    }
+  }
+  
   function initCollegeLogosCarousel() {
+    // NEVER initialize on mobile - use CSS only
+    var isMobile = window.innerWidth <= 768 || window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
+      return;
+    }
+    
     if (typeof jQuery !== 'undefined' && typeof jQuery.fn !== 'undefined' && typeof jQuery.fn.owlCarousel !== 'undefined') {
       var $carousel = jQuery('.college-logos-carousel');
       if ($carousel.length && !$carousel.hasClass('owl-loaded')) {
@@ -54,6 +69,107 @@
     }
   }
   
+  // Simple: prevent carousel initialization on mobile
+  function forceLogosVisible() {
+    var isMobile = window.innerWidth <= 768 || window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
+      var $carousel = jQuery('.college-logos-carousel');
+      if ($carousel.length) {
+        // Just prevent initialization - CSS will handle the rest
+        $carousel.removeClass('owl-carousel');
+        if ($carousel.hasClass('owl-loaded')) {
+          try {
+            $carousel.trigger('destroy.owl.carousel');
+          } catch(e) {}
+          $carousel.removeClass('owl-loaded');
+        }
+      }
+    }
+  }
+  
+  // Apply mobile styles directly via JavaScript
+  function applyMobileStyles() {
+    var isMobile = window.innerWidth <= 768 || window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
+      // Just prevent carousel initialization - CSS handles display
+      forceLogosVisible();
+      
+      // Center features section
+      var $featuresBar = jQuery('.features-bar');
+      if ($featuresBar.length) {
+        $featuresBar.find('.container').css('text-align', 'center');
+        $featuresBar.find('.row').css({
+          'display': 'flex',
+          'flex-direction': 'column',
+          'align-items': 'center',
+          'justify-content': 'center'
+        });
+        $featuresBar.find('.box-simple').css({
+          'text-align': 'center',
+          'margin': '0 auto'
+        });
+        $featuresBar.find('.box-simple .icon').css('margin', '0 auto');
+      }
+      
+      // Center college logos section
+      var $logosSection = jQuery('.bar.background-pentagon');
+      if ($logosSection.length) {
+        $logosSection.find('.heading, .heading h2').css('text-align', 'center');
+        $logosSection.find('.container').css('text-align', 'center');
+      }
+      
+      // Remove blur from banner images - only homepage carousel should have blur (handled by CSS)
+    }
+  }
+  
+  // Run mobile styles after jQuery is ready
+  waitForJQuery(function() {
+    function runMobileStyles() {
+      // Check both window.innerWidth and matchMedia for mobile
+      var isMobile = window.innerWidth <= 768 || window.matchMedia('(max-width: 768px)').matches;
+      console.log('Running mobile styles, innerWidth:', window.innerWidth, 'matchMedia:', window.matchMedia('(max-width: 768px)').matches, 'isMobile:', isMobile);
+      if (isMobile) {
+        applyMobileStyles();
+      }
+    }
+    
+    // Run immediately if DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        runMobileStyles();
+        setTimeout(runMobileStyles, 100);
+        setTimeout(runMobileStyles, 500);
+        setTimeout(runMobileStyles, 1000);
+        setTimeout(runMobileStyles, 2000);
+        setTimeout(runMobileStyles, 3000);
+      });
+    } else {
+      runMobileStyles();
+      setTimeout(runMobileStyles, 100);
+      setTimeout(runMobileStyles, 500);
+      setTimeout(runMobileStyles, 1000);
+      setTimeout(runMobileStyles, 2000);
+      setTimeout(runMobileStyles, 3000);
+    }
+    
+    // Also run on window load
+    window.addEventListener('load', function() {
+      setTimeout(runMobileStyles, 100);
+      setTimeout(runMobileStyles, 500);
+      setTimeout(runMobileStyles, 1000);
+    });
+  });
+  
+  // Also handle window resize to destroy/reinitialize as needed
+  var resizeTimer;
+  jQuery(window).on('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      initCollegeLogosCarousel();
+      applyMobileStyles();
+    }, 250);
+  });
+  
   // Wait for owlCarousel script to load, then initialize
   var checkOwlCarousel = setInterval(function() {
     if (typeof jQuery !== 'undefined' && typeof jQuery.fn !== 'undefined' && typeof jQuery.fn.owlCarousel !== 'undefined') {
@@ -72,6 +188,20 @@
   // Fallback: try on window load
   window.addEventListener('load', function() {
     setTimeout(initCollegeLogosCarousel, 200);
+    // Also destroy on mobile after a short delay to catch any late initialization
+    if (window.innerWidth <= 768) {
+      setTimeout(function() {
+        var $carousel = jQuery('.college-logos-carousel');
+        if ($carousel.length && $carousel.hasClass('owl-loaded')) {
+          try {
+            $carousel.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+            $carousel.find('.owl-stage-outer, .owl-stage, .owl-item').contents().unwrap();
+          } catch(e) {
+            console.log('Carousel destroy on load:', e);
+          }
+        }
+      }, 500);
+    }
   });
   
   // Timeout after 5 seconds to stop checking
