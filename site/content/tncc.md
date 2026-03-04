@@ -138,7 +138,7 @@ type = "page"
     <h2>Ready to Enhance Your Trauma Nursing Skills?</h2>
     <p>Take your trauma care capabilities to the next level with our comprehensive TNCC training.</p>
     <div class="cta-calendly-widget">
-      <script type="text/javascript" src="https://bookeo.com/widget.js?a=33503UKWPH19AE3851031"></script>
+      <script type="text/javascript" src="https://bookeo.com/widget.js?a=33503UKWPH19AE3851031&type=33507JA79E19C9254077B"></script>
     </div>
     <div class="cta-buttons">
       <a href="/contact/" class="btn-secondary">Contact Us</a>
