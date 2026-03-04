@@ -3,6 +3,10 @@
 {{ if isset .Site.Data "features" }}
 {{ if gt (len .Site.Data.features) 0 }}
 <section class="bar background-white features-bar">
+    <div class="sr-only">
+        <h2>ALS and Trauma Nursing Training Programs for Healthcare Professionals</h2>
+        <p>CoastResus Group delivers nationally recognised Advanced Life Support (ALS) Level 1 and Level 2, Trauma Nursing Core Course (TNCC), recertification programs, and custom resuscitation training across Australia. Our courses support clinical excellence and certification for nurses, paramedics, and healthcare professionals in emergency and critical care.</p>
+    </div>
     <div class="container">
         {{ $elements := default 3 .Site.Params.features.cols }}
         {{ $features := sort .Site.Data.features "weight" }}

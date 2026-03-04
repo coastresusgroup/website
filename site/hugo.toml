@@ -1,7 +1,8 @@
+# For production builds, set baseURL to your live domain (e.g. hugo --baseURL "https://www.yoursite.com/") so canonical URLs and sitemap are correct.
 baseurl = "/"
 title = "CoastResusGroup"
 theme = "hugo-universal-theme"
-languageCode = "en-us"
+languageCode = "en-AU"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
 
@@ -127,13 +128,12 @@ pluralizelisttitles = false
 [params]
     viewMorePostLink = "/blog/"
     author = "CoastResusGroup"
-    defaultKeywords = ["coastresusgroup", "resuscitation", "medical", "training"]
+    defaultKeywords = ["coastresusgroup", "coast resus group", "ALS", "ALS1", "ALS2", "TNCC", "resuscitation", "medical training", "advanced life support", "trauma nursing", "CPD", "Australia", "healthcare training", "certification", "emergency care"]
     mainSections = ["blog"]
     defaultDescription = "CoastResusGroup - Professional resuscitation training and medical education"
 
     # Social media
     facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
-    twitter_site = "GoHugoIO" # the Twitter handle of your site (without the '@')
     default_sharing_image = "img/sharing-default.png"
 
     # Map widget using OpenStreetMap (free, no API key required)

@@ -3,6 +3,7 @@
 <meta name="googlebot" content="index,follow,snippet,archive">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ $title_plain := .Title | markdownify | plainify }}
+{{ if .IsHome }}{{ $title_plain = "Advanced Life Support (ALS) & Trauma Nursing Training for Healthcare Professionals in Australia" }}{{ end }}
 <title>{{ $title_plain }}</title>
 <meta name="author" content="{{ .Param "author" }}" />
 {{ $keywords := .Site.Params.defaultKeywords | default (slice "" | first 0) }}
@@ -12,7 +13,9 @@
 <meta name="keywords" content="{{ delimit (uniq $keywords) ", " }}">
 {{ end }}
 {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
+{{ if .IsHome }}{{ $description_plain = "Nationally recognised emergency and resuscitation training for healthcare professionals seeking clinical excellence and certification." }}{{ end }}
 <meta name="description" content="{{ $description_plain }}">
+<link rel="canonical" href="{{ .Permalink }}">
 
 {{ hugo.Generator }}
 
@@ -92,13 +95,11 @@
   {{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
 {{ end }}
 
-<!-- Twitter Card meta tags -->
+<!-- Twitter Card meta tags (no account linked) -->
 <meta name="twitter:card" content="summary{{ if (and $is_blog (and $has_image $is_valid_image)) }}_large_image{{ end }}">
-{{ with .Param "twitter_site" }}<meta name="twitter:site" content="@{{ . }}">{{ end }}
 <meta name="twitter:title" content="{{ $title_plain | truncate 70 }}">
 {{ if $is_valid_image }}
 <meta name="twitter:image" content="{{ $image | absURL }}">
 {{ end }}
 <meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
-{{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
 

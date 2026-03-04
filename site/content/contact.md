@@ -1,5 +1,6 @@
 +++
 title = "Contact"
+description = "Contact Coast Resus Group for ALS and TNCC course enquiries, bookings, and training information across Australia."
 id = "contact"
 type = "page"
 +++

@@ -1,2 +1,28 @@
 <!-- CoastResusGroup Custom CSS -->
 <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}" type="text/css">
+
+<!-- JSON-LD structured data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Coast Resus Group",
+      "url": "{{ absURL "" }}",
+      "description": "Nationally and internationally recognised Advanced Life Support (ALS) and Trauma Nursing Core Course (TNCC) training for healthcare professionals across Australia.",
+      "logo": "{{ "img/logo.png" | absURL }}"
+    },
+    {
+      "@type": "WebSite",
+      "name": "{{ .Site.Title }}",
+      "url": "{{ absURL "" }}",
+      "description": "Nationally recognised emergency and resuscitation training for healthcare professionals seeking clinical excellence and certification.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Coast Resus Group"
+      }
+    }
+  ]
+}
+</script>

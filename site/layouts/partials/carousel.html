@@ -2,6 +2,14 @@
 {{ if isset .Site.Data "carousel" }}
 {{ if gt (len .Site.Data.carousel) 0 }}
 <section>
+    <h1 class="sr-only">Advanced Life Support (ALS) & Trauma Nursing Training for Healthcare Professionals in Australia</h1>
+    <div class="sr-only">
+        <h2>Nationally and Internationally Recognised ALS and TNCC Training in Australia</h2>
+        <p>Coast Resus Group delivers nationally and internationally recognised Advanced Life Support (ALS Level 1 and ALS Level 2) and Trauma Nursing Core Course (TNCC) training for healthcare professionals across Australia. Our programs are designed for nurses, paramedics, doctors and allied health clinicians seeking structured, evidence-based emergency care education that strengthens clinical confidence and meets professional certification requirements.</p>
+        <p>Our Advanced Life Support (ALS) courses align with current Australian guidelines and focus on the assessment and management of the deteriorating and critically ill patient, including cardiac arrest management, advanced airway skills, resuscitation pharmacology and team leadership. The Trauma Nursing Core Course (TNCC) provides a systematic, internationally recognised framework for trauma assessment and management, reinforcing structured primary and secondary survey approaches used in emergency and acute care settings. We also offer streamlined recertification pathways to help clinicians maintain currency and clinical readiness.</p>
+        <p>All courses contribute to continuing professional development (CPD) requirements and are delivered by experienced emergency and critical care clinicians actively working in frontline healthcare environments. With high-fidelity simulation and structured debriefing, our training is practical, clinically relevant and immediately transferable to real-world practice.</p>
+        <p>Secure your place in an upcoming course and advance your resuscitation and trauma capability with Coast Resus Group.</p>
+    </div>
     <div class="home-carousel">
         <div class="dark-mask"></div>
         <div class="container">
@@ -35,7 +43,7 @@
                                         {{ end }}
                                         {{ if $item.logo }}
                                         <div class="carousel-logo">
-                                            <img src="{{ $item.logo | relURL }}" alt="">
+                                            <img src="{{ $item.logo | relURL }}" alt="{{ $item.title }} course logo">
                                         </div>
                                         {{ end }}
                                     </div>
